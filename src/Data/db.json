@@ -1,0 +1,890 @@
+{
+  "category": [
+    {
+      "id": "1",
+      "name": "Modest Wear"
+    },
+    {
+      "id": "2",
+      "name": "Scarves"
+    },
+    {
+      "id": "3",
+      "name": "Prayer Wear"
+    },
+    {
+      "id": "4",
+      "name": "Winter Collection"
+    },
+    {
+      "id": "5",
+      "name": "Summer Collection"
+    }
+  ],
+  "collections": [
+    {
+      "id": "1",
+      "name": "Linen Dresses",
+      "categoryId": "1",
+      "imgName": "DSC04126 (5).jpg"
+    },
+    {
+      "id": "2",
+      "name": "Buttoned Linen Sets",
+      "categoryId": "1",
+      "imgName": "20240228-DSC03528 (5).jpg"
+    },
+    {
+      "id": "3",
+      "name": "Abaya Dresses",
+      "categoryId": "1",
+      "imgName": "20240228-DSC03768 (5).jpg"
+    },
+    {
+      "id": "4",
+      "name": "Plush Cotton Scarves",
+      "categoryId": "2",
+      "imgName": "image_a63e9563-7e63-4577-b56a-f188d941e0a6 (5).jpg"
+    },
+    {
+      "id": "5",
+      "name": "Classic Grace Cotton Scarves",
+      "categoryId": "2",
+      "imgName": "DSC03922 (5).jpg"
+    },
+    {
+      "id": "6",
+      "name": "Thin Grace Cotton Scarves",
+      "categoryId": "2",
+      "imgName": "20230907-DSC03762 (5).jpg"
+    },
+    {
+      "id": "7",
+      "name": "Delicate Cotton Scarves",
+      "categoryId": "2",
+      "imgName": "Sjaal_In_Door_Shoot_00427 (5).jpg"
+    },
+    {
+      "id": "8",
+      "name": "Charm Cotton Scarves",
+      "categoryId": "2",
+      "imgName": "DSC03310 (5).jpg"
+    },
+    {
+      "id": "9",
+      "name": "Satin Scarves",
+      "categoryId": "2",
+      "imgName": "IMG-20230819-125233-654 (5).jpeg"
+    },
+    {
+      "id": "10",
+      "name": "Printed Chiffon Scarves",
+      "categoryId": "2",
+      "imgName": "20230907-DSC03762 (5).jpg"
+    },
+    {
+      "id": "11",
+      "name": "Sleeved Prayer Sets",
+      "categoryId": "3",
+      "imgName": "20240228-DSC04053 (5).jpg"
+    },
+    {
+      "id": "12",
+      "name": "Non-Sleeved Prayer Sets",
+      "categoryId": "3",
+      "imgName": "20231108-140228 (5).jpg"
+    },
+    {
+      "id": "13",
+      "name": "Prayer Isdals",
+      "categoryId": "3",
+      "imgName": "3554650532 (5).png"
+    },
+    {
+      "id": "14",
+      "name": "Wool Scarves",
+      "categoryId": "4",
+      "imgName": "image_11739673-f18d-4ee2-92c5-87ca522efa58 (5).jpg"
+    },
+    {
+      "id": "15",
+      "name": "Pullovers",
+      "categoryId": "4",
+      "imgName": "image (5).jpg"
+    },
+    {
+      "id": "16",
+      "name": "Chiffon Coverups",
+      "categoryId": "5",
+      "imgName": "20230515-152828 (5).jpg"
+    },
+    {
+      "id": "17",
+      "name": "Satin Coverups",
+      "categoryId": "5",
+      "imgName": "image (5).jpeg"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "collectionId": "1",
+      "name": "Black Linen Dress",
+      "price": 850,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/BlackLinenDress.webp",
+        "/assets/images/BlackLinenDress2.webp",
+        "/assets/images/BlackLinenDress3.webp",
+        "/assets/images/BlackLinenDress4.webp",
+        "/assets/images/BlackLinenDress5.webp"
+      ]
+    },
+    {
+      "id": "2",
+      "collectionId": "1",
+      "name": "Teal Linen Dress",
+      "price": 850,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/TealLinenDress.webp",
+        "/assets/images/TealLinenDress2.webp",
+        "/assets/images/TealLinenDress3.webp",
+        "/assets/images/TealLinenDress4.webp",
+        "/assets/images/TealLinenDress5.webp"
+      ]
+    },
+    {
+      "id": "3",
+      "collectionId": "1",
+      "name": "Olive Linen Dress",
+      "price": 850,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/oliveLinenDress.webp",
+        "/assets/images/oliveLinenDress2.webp",
+        "/assets/images/oliveLinenDress3.webp",
+        "/assets/images/oliveLinenDress4.webp",
+        "/assets/images/OliveLinenDress5.webp"
+      ]
+    },
+    {
+      "id": "4",
+      "collectionId": "1",
+      "name": "Cashmere Linen Dress",
+      "price": 850,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/CashmereLinenDress.webp",
+        "/assets/images/CashmereLinenDress2.webp",
+        "/assets/images/CashmereLinenDress3.webp",
+        "/assets/images/CashmereLinenDress4.webp",
+        "/assets/images/CashmereLinenDress5.webp"
+      ]
+    },
+    {
+      "id": "5",
+      "collectionId": "2",
+      "name": "Olive Buttoned Linen Set",
+      "price": 1000,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "../assets/images/OliveButtonedLinenSet.webp",
+        "../assets/images/OliveButtonedLinenSet2.webp",
+        "../assets/images/OliveButtonedLinenSet3.webp",
+        "../assets/images/OliveButtonedLinenSet4.webp",
+        "../assets/images/OliveButtonedLinenSet5.webp"
+      ]
+    },
+    {
+      "id": "6",
+      "collectionId": "2",
+      "name": "Black Buttoned Linen Set",
+      "price": 1000,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/BlackButtonedLinenSet.webp",
+        "/assets/images/BlackButtonedLinenSet2.webp",
+        "/assets/images/BlackButtonedLinenSet3.webp",
+        "/assets/images/BlackButtonedLinenSet4.webp"
+      ]
+    },
+    {
+      "id": "7",
+      "collectionId": "2",
+      "name": "Cream Buttoned Linen Set",
+      "price": 1000,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/CreamButtonedLinenSet.webp",
+        "/assets/images/CreamButtonedLinenSet2.webp",
+        "/assets/images/CreamButtonedLinenSet3.webp",
+        "/assets/images/CreamButtonedLinenSet4.webp",
+        "/assets/images/CreamButtonedLinenSet5.webp"
+      ]
+    },
+    {
+      "id": "8",
+      "collectionId": "2",
+      "name": "Beige Buttoned Linen Set",
+      "price": 1000,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/BeigeButtonedLinenSet.webp",
+        "/assets/images/BeigeButtonedLinenSet2.webp",
+        "/assets/images/BeigeButtonedLinenSet3.webp",
+        "/assets/images/BeigeButtonedLinenSet4.webp",
+        "/assets/images/BeigeButtonedLinenSet5.webp"
+      ]
+    },
+    {
+      "id": "9",
+      "collectionId": "3",
+      "name": "Black Abaya Dress",
+      "price": 700,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/BlackAbayaDress.webp",
+        "/assets/images/BlackAbayaDress2.webp",
+        "/assets/images/BlackAbayaDress3.webp",
+        "/assets/images/BlackAbayaDress4.webp",
+        "/assets/images/BlackAbayaDress5.webp"
+      ]
+    },
+    {
+      "id": "10",
+      "collectionId": "3",
+      "name": "Mint Abaya Dress",
+      "price": 700,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/MintAbayaDress.webp",
+        "/assets/images/MintAbayaDress2.webp",
+        "/assets/images/MintAbayaDress3.webp",
+        "/assets/images/MintAbayaDress4.webp",
+        "/assets/images/MintAbayaDress5.webp"
+      ]
+    },
+    {
+      "id": "11",
+      "collectionId": "3",
+      "name": "Beige Abaya Dress",
+      "price": 700,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/BeigeAbayaDress.webp",
+        "/assets/images/BeigeAbayaDress2.webp",
+        "/assets/images/BeigeAbayaDress3.webp",
+        "/assets/images/BeigeAbayaDress4.webp",
+        "/assets/images/BeigeAbayaDress5.webp"
+      ]
+    },
+    {
+      "id": "12",
+      "collectionId": "3",
+      "name": "Blush Abaya Dress",
+      "price": 700,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/BlushAbayaDress.webp",
+        "/assets/images/BlushAbayaDress2.webp",
+        "/assets/images/BlushAbayaDress3.webp",
+        "/assets/images/BlushAbayaDress4.webp",
+        "/assets/images/BlushAbayaDress5.webp"
+      ]
+    },
+    {
+      "id": "13",
+      "collectionId": "4",
+      "name": "Black Plush",
+      "price": 300,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/BlackPlush.webp",
+        "/assets/images/BlackPlush2.webp",
+        "/assets/images/BlackPlush3.webp",
+        "/assets/images/BlackPlush4.webp",
+        "/assets/images/BlackPlush5.webp"
+      ]
+    },
+    {
+      "id": "14",
+      "collectionId": "4",
+      "name": "Cafe Plush",
+      "price": 300,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/CafePlush.webp",
+        "/assets/images/CafePlush2.webp"
+      ]
+    },
+    {
+      "id": "15",
+      "collectionId": "4",
+      "name": "Chocolate Plush",
+      "price": 300,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/ChocolatePlush.webp",
+        "/assets/images/ChocolatePlush2.webp",
+        "/assets/images/ChocolatePlush3.webp"
+      ]
+    },
+    {
+      "id": "16",
+      "collectionId": "4",
+      "name": "Jade Plush",
+      "price": 300,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/JadePlush.webp",
+        "/assets/images/JadePlush2.webp",
+        "/assets/images/JadePlush3.webp",
+        "/assets/images/JadePlush4.webp",
+        "/assets/images/JadePlush5.webp"
+      ]
+    },
+    {
+      "id": "17",
+      "collectionId": "5",
+      "name": "Black Grace",
+      "price": 250,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/BlackGrace.webp",
+        "/assets/images/BlackGrace2.webp",
+        "/assets/images/BlackGrace3.webp",
+        "/assets/images/BlackGrace4.webp",
+        "/assets/images/BlackGrace5.webp"
+      ]
+    },
+    {
+      "id": "18",
+      "collectionId": "5",
+      "name": "Dark Blue Grace",
+      "price": 250,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/DarkBlueGrace.webp",
+        "/assets/images/DarkBlueGrace2.webp",
+        "/assets/images/DarkBlueGrace3.webp",
+        "/assets/images/DarkBlueGrace4.webp",
+        "/assets/images/DarkBlueGrace5.webp"
+      ]
+    },
+    {
+      "id": "19",
+      "collectionId": "5",
+      "name": "Maroon Grace",
+      "price": 250,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/MaroonGrace.webp",
+        "/assets/images/MaroonGrace2.webp",
+        "/assets/images/MaroonGrace3.webp",
+        "/assets/images/MaroonGrace4.webp"
+      ]
+    },
+    {
+      "id": "20",
+      "collectionId": "5",
+      "name": "Oakwood Grace",
+      "price": 250,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/OakwoodGrace.webp",
+        "/assets/images/OakwoodGrace2.webp",
+        "/assets/images/OakwoodGrace3.webp",
+        "/assets/images/OakwoodGrace4.webp",
+        "/assets/images/OakwoodGrace5.webp"
+      ]
+    },
+    {
+      "id": "21",
+      "collectionId": "11",
+      "name": "Sleeved Olive Prayer Set",
+      "price": 650,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/SleevedOlivePrayerSet.webp",
+        "/assets/images/SleevedOlivePrayerSet2.webp",
+        "/assets/images/SleevedOlivePrayerSet3.webp",
+        "/assets/images/SleevedOlivePrayerSet4.webp"
+      ]
+    },
+    {
+      "id": "22",
+      "collectionId": "11",
+      "name": "Sleeved Cream Prayer Set",
+      "price": 650,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/SleevedCreamPrayerSet.webp",
+        "/assets/images/SleevedCreamPrayerSet2.webp",
+        "/assets/images/SleevedCreamPrayerSet3.webp",
+        "/assets/images/SleevedCreamPrayerSet4.webp"
+      ]
+    },
+    {
+      "id": "23",
+      "collectionId": "11",
+      "name": "Sleeved Mint Prayer Set",
+      "price": 650,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/SleevedMintPrayerSet.webp",
+        "/assets/images/SleevedMintPrayerSet2.webp",
+        "/assets/images/SleevedMintPrayerSet3.webp",
+        "/assets/images/SleevedMintPrayerSet4.webp"
+      ]
+    },
+    {
+      "id": "24",
+      "collectionId": "11",
+      "name": "Sleeved Violet Prayer Set",
+      "price": 650,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/SleevedVioletPrayerSet.webp",
+        "/assets/images/SleevedVioletPrayerSet2.webp",
+        "/assets/images/SleevedVioletPrayerSet3.webp",
+        "/assets/images/SleevedVioletPrayerSet4.webp"
+      ]
+    },
+    {
+      "id": "25",
+      "collectionId": "12",
+      "name": "Non-Sleeved Cream Prayer Set",
+      "price": 550,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/Non-SleevedCreamPrayerSet.webp",
+        "/assets/images/Non-SleevedCreamPrayerSet2.webp",
+        "/assets/images/Non-SleevedCreamPrayerSet3.webp",
+        "/assets/images/Non-SleevedCreamPrayerSet4.webp"
+      ]
+    },
+    {
+      "id": "26",
+      "collectionId": "12",
+      "name": "Non-Sleeved Violet Prayer Set",
+      "price": 550,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/Non-SleevedVioletPrayerSet.webp",
+        "/assets/images/Non-SleevedVioletPrayerSet2.webp",
+        "/assets/images/Non-SleevedVioletPrayerSet3.webp",
+        "/assets/images/Non-SleevedVioletPrayerSet4.webp",
+        "/assets/images/Non-SleevedVioletPrayerSet5.webp"
+      ]
+    },
+    {
+      "id": "27",
+      "collectionId": "12",
+      "name": "Non-Sleeved Olive Prayer Set",
+      "price": 550,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/Non-SleevedOlivePrayerSet.webp",
+        "/assets/images/Non-SleevedOlivePrayerSet2.webp",
+        "/assets/images/Non-SleevedOlivePrayerSet3.webp"
+      ]
+    },
+    {
+      "id": "28",
+      "collectionId": "14",
+      "name": "Camel Wool Scarf",
+      "price": 350,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/CamelWoolScarf.webp",
+        "/assets/images/CamelWoolScarf2.webp",
+        "/assets/images/CamelWoolScarf3.webp",
+        "/assets/images/CamelWoolScarf4.webp",
+        "/assets/images/CamelWoolScarf5.webp"
+      ]
+    },
+    {
+      "id": "29",
+      "collectionId": "14",
+      "name": "Grey Wool Scarf",
+      "price": 350,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/GreyWoolScarf.webp",
+        "/assets/images/GreyWoolScarf2.webp",
+        "/assets/images/GreyWoolScarf3.webp"
+      ]
+    },
+    {
+      "id": "30",
+      "collectionId": "14",
+      "name": "Cream Wool Scarf",
+      "price": 350,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/CreamWoolScarf.webp"
+      ]
+    },
+    {
+      "id": "31",
+      "collectionId": "14",
+      "name": "Black Wool Scarf",
+      "price": 350,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/BlackWoolScarf.webp"
+      ]
+    },
+    {
+      "id": "32",
+      "collectionId": "15",
+      "name": "Olive Pullover",
+      "price": 550,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "Unisex wool pullovers made on Egyptian lands by Egyptian hands ♥️",
+      "images": [
+        "/assets/images/OlivePullover.webp",
+        "/assets/images/OlivePullover2.webp",
+        "/assets/images/OlivePullover3.webp",
+        "/assets/images/OlivePullover4.webp"
+      ]
+    },
+    {
+      "id": "33",
+      "collectionId": "15",
+      "name": "Black Pullover",
+      "price": 550,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "Unisex wool pullovers made on Egyptian lands by Egyptian hands ♥️",
+      "images": [
+        "/assets/images/BlackPullover.webp",
+        "/assets/images/BlackPullover2.webp",
+        "/assets/images/BlackPullover3.jpg",
+        "/assets/images/BlackPullover4.webp",
+        "/assets/images/BlackPullover5.webp"
+      ]
+    },
+    {
+      "id": "34",
+      "collectionId": "15",
+      "name": "Burgundy Pullover",
+      "price": 350,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/BurgundyPullover.webp",
+        "/assets/images/BurgundyPullover2.webp",
+        "/assets/images/BurgundyPullover3.webp",
+        "/assets/images/BurgundyPullover4.jpg",
+        "/assets/images/BurgundyPullover5.webp"
+      ]
+    },
+    {
+      "id": "35",
+      "collectionId": "15",
+      "name": "Beige Pullover",
+      "price": 350,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/BeigePullover.jpg",
+        "/assets/images/BeigePullover2.webp",
+        "/assets/images/BeigePullover3.webp",
+        "/assets/images/BeigePullover4.webp",
+        "/assets/images/BeigePullover5.webp"
+      ]
+    },
+    {
+      "id": "36",
+      "collectionId": "16",
+      "name": "Hawaii",
+      "price": 200,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/Hawaii.webp"
+      ]
+    },
+    {
+      "id": "37",
+      "collectionId": "16",
+      "name": "Kiwi",
+      "price": 200,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/Kiwi.webp",
+        "/assets/images/Kiwi2.webp",
+        "/assets/images/Kiwi3.webp"
+      ]
+    },
+    {
+      "id": "38",
+      "collectionId": "16",
+      "name": "Popsicle",
+      "price": 200,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/Popsicle.webp",
+        "/assets/images/Popsicle2.webp",
+        "/assets/images/Popsicle3.webp"
+      ]
+    },
+    {
+      "id": "39",
+      "collectionId": "17",
+      "name": "Bahamas",
+      "price": 200,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/Bahamas.webp",
+        "/assets/images/Bahamas2.webp",
+        "/assets/images/Bahamas3.webp"
+      ]
+    },
+    {
+      "id": "40",
+      "collectionId": "17",
+      "name": "Maldives",
+      "price": 200,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/Maldives.webp",
+        "/assets/images/Maldives2.webp",
+        "/assets/images/Maldives3.webp"
+      ]
+    },
+    {
+      "id": "41",
+      "collectionId": "17",
+      "name": "Malibu",
+      "price": 200,
+      "availableSizes": [
+        "S/M",
+        "L/XL"
+      ],
+      "availableQuantaties": 5,
+      "description": "The Dress that makes Modesty the REAL fashion statement! Linen Dress with simplistic design that you can style casually or uplifted Available in Black, Olive, Jade, Mint, Cashmere and Beige Available in S/M, L/XL",
+      "images": [
+        "/assets/images/Malibu.webp",
+        "/assets/images/Malibu2.webp",
+        "/assets/images/Malibu3.webp"
+      ]
+    }
+  ],
+  "cart": [
+    {
+      "id": "",
+      "collectionId": "",
+      "name": "",
+      "price": 0,
+      "size": "",
+      "quantity": 0,
+      "image": ""
+    },
+    {
+      "id": "6",
+      "collectionId": "2",
+      "name": "Black Buttoned Linen Set",
+      "price": 1000,
+      "size": "S/M",
+      "quantity": 1,
+      "image": "/assets/images/BlackButtonedLinenSet.webp"
+    }
+  ]
+}
