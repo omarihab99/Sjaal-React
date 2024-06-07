@@ -1,0 +1,85 @@
+.explore-btn {
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 0px;
+    padding: 10px;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+  .main-section {
+    position: relative;
+  }
+  .explore-btn:hover {
+    background-color: #CFC0AE;
+    color: rgb(255, 255, 255);
+  }
+  .content-container {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+  }
+  
+  h2 {
+    box-sizing: border-box;
+    font-size: 50px;
+    font-weight: 40;
+    color: rgb(255, 255, 255);
+  }
+  /* .img-background { */
+    /* position: relative; */
+    
+    /* background-image: url(""); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; */
+    /* height: 200vh; */
+    /* width: 100%; */
+    /* animation-name: move;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; */
+  
+  /* } */
+  /* 
+  @keyframes move {
+    0% {
+      right: 0px;
+      top: 0px;
+    }
+    25% {
+      right: 100px;
+      top: 0px;
+    }
+    50% {
+      right: 100px;
+      top: 100px;
+    }
+    75% {
+      left: 0px;
+      top: 100px;
+    }
+    100% {
+      left: 0px;
+      top: 0px;
+    }
+  
+  } */
+  
+  @media screen and (max-width: 600px) {
+    .content-container {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%);
+      text-align: center;
+    }
+    .content-container h2 {
+      font-size: 30px;
+      font-weight: 400;
+    }  
+  }

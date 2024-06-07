@@ -1,7 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import "bootstrap/dist/css/bootstrap.css";
+import { Provider } from 'react-redux';
+import { lazy, Suspense } from 'react';
+const HomePage = lazy(() => import('./pages/HomePage'));
 function App() {
   return (
     <div className="App">
