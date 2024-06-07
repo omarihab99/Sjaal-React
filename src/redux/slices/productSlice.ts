@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { IProduct } from "../../models/IProduct";
+import axios from "axios";
 
 const URL = "http://localhost:3000/products";
 /**
@@ -14,9 +15,8 @@ export const fetchProductsByCollectionId = createAsyncThunk(
      * @returns {Promise<IProduct[]>} A promise that resolves to the fetched data.
      */
     async (collectionId: string): Promise<IProduct[]> => {
-        const response = await fetch(`${URL}?collectionId=${collectionId}`);
-        const data = await response.json();
-        return data;
+        const response = await axios.get(`${URL}?collectionId=${collectionId}`); // Use axios.get
+        return response.data;
     }
 );
 /**
@@ -32,9 +32,8 @@ export const fetchLimitedCollectionProducts = createAsyncThunk(
      * @returns {Promise<IProduct[]>} A promise that resolves to the fetched data.
      */
     async ({ collectionId, limit }: { collectionId: string; limit: number }): Promise<IProduct[]> => {
-        const response = await fetch(`${URL}?collectionId=${collectionId}&_start=1&_limit=${limit}`);
-        const data = await response.json();
-        return data;
+        const response = await axios.get(`${URL}?collectionId=${collectionId}&_start=1&_limit=${limit}`); // Use axios.get
+        return response.data;
     }
 )
 /**
@@ -49,9 +48,8 @@ export const getProductbyId = createAsyncThunk(
      * @returns {Promise<IProduct>} A promise that resolves to the fetched data.
      */
     async (id: string): Promise<IProduct> => {
-        const response = await fetch(`${URL}/${id}`);
-        const data = await response.json();
-        return data;
+        const response = await axios.get(`${URL}/${id}`); // Use axios.get
+        return response.data;
     }
 )
 /**
@@ -64,9 +62,8 @@ export const fetchProducts = createAsyncThunk(
      * @returns {Promise<IProduct[]>} A promise that resolves to the fetched data.
      */
     async (): Promise<IProduct[]> => {
-        const response = await fetch(URL);
-        const data = await response.json();
-        return data;
+        const response = await axios.get(URL); // Use axios.get
+        return response.data;
     }
 )
 /**
