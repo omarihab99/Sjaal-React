@@ -1,18 +1,22 @@
 import React from "react";
-import "../../styles/mainsection.module.css";
+import mainSectionStyles from "../../styles/mainsection.module.css";
+import { Link } from "react-router-dom";
+import classNames from "classnames";
 const MainSection = () => {
+  const mainSectionClasses = classNames(mainSectionStyles.mainSection, "w-100");
+  const exploreButtonClasses = classNames(mainSectionStyles.exploreBtn, "btn", "btn-outline-light");
   return (
     <div>
-      <section className={`main-section w-100`}>
-        <div className="img-background ">
-            {/*TODO: add background image path*/}
-          <img src="./public/images/main.jpg" alt="Main Section"></img>
+      <section className={mainSectionClasses}>
+        <div>
+          {/*TODO: add background image path*/}
+          <img src="images/main.jpg" alt="Main Section" className="img-fluid"></img>
         </div>
-        <div className={"content-container"}>
+        <div className={mainSectionStyles.contentContainer}>
           <h2>Modestly Gorgeous</h2>
           {/*TODO: add link to collections*/}
-          <button className={"explore-btn btn btn-outline-light"} type="button">
-            Explore
+          <button className={exploreButtonClasses} type="button">
+            <Link className={mainSectionStyles.textDec} to="/collections">Explore</Link>
           </button>
         </div>
       </section>
