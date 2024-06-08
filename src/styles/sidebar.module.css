@@ -1,0 +1,51 @@
+.btnClose {
+    position: absolute;
+    top: 10px;
+  }
+  .tabsContainer {
+    position: relative;
+    margin-top: 30px;
+  }
+  .tabsContainer button {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    background: none;
+  }
+  
+  .tabsContainer button:hover, .homeHover:hover {
+    background-color: rgb(200, 193, 193);
+  }
+  .icon {
+    position: absolute;
+    right: 5px;
+    margin-right: 5px;
+  }
+  #divCategoriesTabs, #divCollectionsTabs, #divHomeTabs {
+    animation: fadein 0.5s;
+  }
+  a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+  a:hover{
+    color: rgb(0, 0, 0);
+  }
+  .btnColor{
+    color: rgb(0, 0, 0);
+  }
+  .btnColor:hover{
+    color: rgb(0, 0, 0);
+  }
+  .open{
+    visibility: visible;
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
