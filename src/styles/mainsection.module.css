@@ -1,4 +1,4 @@
-.explore-btn {
+.exploreBtn {
     border: 1px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     border-radius: 0px;
@@ -10,21 +10,24 @@
     box-sizing: border-box;
     background-color: transparent;
   }
-  .main-section {
+  .mainSection {
     position: relative;
   }
-  .explore-btn:hover {
+  .exploreBtn:hover {
     background-color: #CFC0AE;
     color: rgb(255, 255, 255);
   }
-  .content-container {
+  .contentContainer {
     position: absolute;
     top: 90%;
     left: 50%;
     transform: translate(-50%);
     text-align: center;
   }
-  
+  .textDec{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
   h2 {
     box-sizing: border-box;
     font-size: 50px;
@@ -71,14 +74,14 @@
   } */
   
   @media screen and (max-width: 600px) {
-    .content-container {
+    .contentContainer {
       position: absolute;
       top: 70%;
       left: 50%;
       transform: translate(-50%);
       text-align: center;
     }
-    .content-container h2 {
+    .contentContainer h2 {
       font-size: 30px;
       font-weight: 400;
     }  
