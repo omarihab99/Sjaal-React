@@ -13,12 +13,10 @@ function App() {
     {
       path: "/",
       element: <HomePage />,
-      children: [
-        {
-          path: "/collections",
-          element: <CollectionsPage />
-        }
-      ]
+    },
+    {
+      path: "/collections",
+      element: <CollectionsPage />,
     }
   ])
   return (
