@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { ICollection } from "../../models/ICollection";
+import axios from "axios";
 const URL = "http://localhost:3000/collections";
 /**
  * This is the action responsible for fetching collections.
@@ -11,28 +12,50 @@ export const fetchCollection  = createAsyncThunk(
      * @returns {Promise<ICollection[]>} A promise that resolves to the fetched data.
      */
     async (): Promise<ICollection[]> => {
-        const response = await fetch(URL);
-        const data = await response.json();
-        return data;
+        const response = await axios.get(URL);
+        return response.data;
     }
 )
+// /**
+//  * This is the action responsible for getting a collection by its id.
+//  * @param {categoryId} - The id of the category to be fetched the collection belongs to.
+//  */
+// export const getCollectionByCategoryId = createAsyncThunk(
+//     "collections/getCollectionById",
+//     /**
+//      * Get the collection from the JSON server by id.
+//      * @param categoryId - The id of the category to fetch the collection belongs to.
+//      * @returns {Promise<ICollection>} A promise that resolves to the fetched data.
+//      */
+//     async (categoryId: string): Promise<ICollection> => {
+//         const response = await axios.get(`${URL}?categoryId=${categoryId}`);
+//         return response.data;
+//     }
+// )
+
 /**
  * This is the action responsible for getting a collection by its id.
- * @param {categoryId} - The id of the category to be fetched the collection belongs to.
+ * @param {collectionId} - The id of the collection to fetch the collection.
  */
-export const getCollectionByCategoryId = createAsyncThunk(
+export const getCollectionById = createAsyncThunk(
     "collections/getCollectionById",
     /**
      * Get the collection from the JSON server by id.
-     * @param categoryId - The id of the category to fetch the collection belongs to.
+     * @param collectionId - The id of the category to fetch the collection belongs to.
      * @returns {Promise<ICollection>} A promise that resolves to the fetched data.
      */
-    async (categoryId: string): Promise<ICollection> => {
-        const response = await fetch(`${URL}?categoryId=${categoryId}`);
-        const data = await response.json();
-        return data;
+    async (collectionId: string) => {
+        try {
+            const response = await axios.get(`${URL}?id=${collectionId}`);
+            console.log(response);
+            
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
     }
 )
+
 const initialState = {
     collections: [] as ICollection[],
     collection: {},
@@ -54,7 +77,10 @@ const collectionSlice = createSlice({
             .addCase(fetchCollection.rejected, (state, action) => {
                 state.status = "failed";
             })
-            .addCase(getCollectionByCategoryId.fulfilled, (state, action) => {
+            // .addCase(getCollectionByCategoryId.fulfilled, (state, action) => {
+            //     state.collection = action.payload;
+            // })
+            .addCase(getCollectionById.fulfilled, (state, action) => {
                 state.collection = action.payload;
             })
     }
