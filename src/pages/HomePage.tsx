@@ -12,9 +12,9 @@ const HomePage = () => {
     },[]);
     return (
         <div>
-            {/* <Sidebar /> */}
-            <MainSection />
-            <ShowCategories />
+            <Sidebar />
+            {/* <MainSection />
+            <ShowCategories /> */}
         </div>
     );
 }

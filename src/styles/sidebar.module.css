@@ -39,6 +39,17 @@
   .open{
     visibility: visible;
   }
+  .socialIconContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .socialIcon{
+    margin: 10px;
+    font-size: 25px;
+  }
   @keyframes fadein {
     from {
       opacity: 0;

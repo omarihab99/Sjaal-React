@@ -7,6 +7,11 @@ import { ICategory } from "../models/ICategory";
 import { ICollection } from "../models/ICollection";
 import navbarStyles from "../styles/sidebar.module.css";
 import axios from "axios";
+import {
+  faSquareFacebook,
+  faTiktok,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 const Sidebar = () => {
   const homeTabs = useRef<HTMLDivElement>(null);
   const categoriesTab = useRef<HTMLDivElement>(null);
@@ -72,7 +77,7 @@ const Sidebar = () => {
   const handleAllCategories = () => {
     navigate("/collections");
     handleClose();
-  }
+  };
   const collectionClicked = (collectionId: string) =>
     localStorage.setItem("collectionId", collectionId);
   return (
@@ -94,7 +99,12 @@ const Sidebar = () => {
               role="tablist"
               aria-orientation="vertical"
             >
-              <Link to="/" className={`nav-link fs-5 ${navbarStyles.btnColor} ${navbarStyles.homeHover}`} id="v-pills-home-tab" onClick={handleClose}>
+              <Link
+                to="/"
+                className={`nav-link fs-5 ${navbarStyles.btnColor} ${navbarStyles.homeHover}`}
+                id="v-pills-home-tab"
+                onClick={handleClose}
+              >
                 Home
               </Link>
               <button
@@ -107,7 +117,11 @@ const Sidebar = () => {
                 aria-selected="false"
                 onClick={openCategories}
               >
-                Categories <FontAwesomeIcon icon={faArrowRight} className={navbarStyles.icon} />
+                Categories{" "}
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className={navbarStyles.icon}
+                />
               </button>
             </div>
           </div>
@@ -132,7 +146,7 @@ const Sidebar = () => {
                 aria-selected="false"
                 onClick={openHome}
               >
-                <FontAwesomeIcon icon={faArrowLeft} className='me-1'/>
+                <FontAwesomeIcon icon={faArrowLeft} className="me-1" />
                 categories
               </button>
               <button
@@ -159,7 +173,10 @@ const Sidebar = () => {
                   key={category.id}
                 >
                   {category.name}
-                  <FontAwesomeIcon icon={faArrowRight} className={navbarStyles.icon} />
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className={navbarStyles.icon}
+                  />
                 </button>
               ))}
             </div>
@@ -186,7 +203,7 @@ const Sidebar = () => {
                 aria-selected="false"
                 onClick={openCategories}
               >
-                <FontAwesomeIcon icon={faArrowLeft} className='me-1' />
+                <FontAwesomeIcon icon={faArrowLeft} className="me-1" />
                 {selectedCategory.name}
               </button>
 
@@ -208,6 +225,36 @@ const Sidebar = () => {
             </div>
           </div>
         </Offcanvas.Body>
+        <div className={navbarStyles.socialIconContainer}>
+          <a
+            rel="noopener"
+            title="Sjaal"
+            href="https://www.facebook.com/SjaalScarves0?mibextid=JRoKGi"
+            target="_blank"
+            className={navbarStyles.socialIcon}
+          >
+            <FontAwesomeIcon icon={faSquareFacebook} bounce />
+          </a>
+          <a
+            rel="noopener"
+            title="Sjaal"
+            href="https://www.instagram.com/sjaal.eg?igsh=MWRwa2NudGp4MXBjMw=="
+            target="_blank"
+            className={navbarStyles.socialIcon}
+
+          >
+            <FontAwesomeIcon icon={faInstagram} bounce />
+          </a>
+          <a
+            rel="noopener"
+            title="Sjaal"
+            href="https://www.tiktok.com/@sjaal_scarves"
+            target="_blank"
+            className={navbarStyles.socialIcon}
+          >
+            <FontAwesomeIcon icon={faTiktok} bounce />
+          </a>
+        </div>
       </Offcanvas>
     </>
   );
