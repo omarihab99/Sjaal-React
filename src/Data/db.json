@@ -147,6 +147,7 @@
       "rates": [
         1,
         2,
+        3,
         3
       ]
     },
@@ -1068,32 +1069,6 @@
     }
   ],
   "cart": [
-    {
-      "id": "1",
-      "categoryId": 1,
-      "name": "Black Linen Dress",
-      "price": 850,
-      "size": "L/XL",
-      "quantity": 4,
-      "image": "https://www.sjaaleg.com/cdn/shop/files/DSC04239.jpg?v=1712423813&width=823"
-    },
-    {
-      "id": "2",
-      "categoryId": 1,
-      "name": "Black Buttoned Linen Set",
-      "price": 1000,
-      "size": "S/M",
-      "quantity": 1,
-      "image": "https://www.sjaaleg.com/cdn/shop/files/20240228-DSC03455.jpg?v=1709198773&width=300"
-    },
-    {
-      "id": "3",
-      "categoryId": 1,
-      "name": "Adonis",
-      "price": 200,
-      "quantity": 3,
-      "image": "https://www.sjaaleg.com/cdn/shop/products/3558338445.jpg?v=1685812038&width=300"
-    }
   ],
   "feedback": [
     {
@@ -1123,7 +1098,6 @@
       "email": "20190592@stud.fci-cu.edu.eg",
       "phone": "01125726669",
       "comment": "WOW!!"
-
     }
   ]
 }

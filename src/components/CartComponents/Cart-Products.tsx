@@ -1,21 +1,26 @@
 
 import React, { useEffect } from 'react';
-import { getProducts } from '../../redux/slices/CartSlice';
-import CartProduct from './Cart-Product';
+import { calculateTotal, getProducts } from '../../redux/slices/CartSlice';
 import CartPrice from './Cart-Price';
 import CartTitle from './Cart-Title';
 import YourCartEmpty from './CartEmpty';
 import { productsDispatch, productsSelector } from '../../hooks/productsHook';
+import { useSelector } from 'react-redux';
+import { IProduct } from '../../models/IProduct';
+import { CartProduct as CartProductModel} from '../../models/cart-product.model';
+import CartProduct from './Cart-Product';
 
 
 const CartProducts: React.FC = () => {
   const dispatch= productsDispatch();
-  const { products, subtotal } = productsSelector((state) => state.cart);
+  // const { products, subtotal } = productsSelector((state) => state.cart);
+  const products:CartProductModel[] = useSelector((state:any)=>state.cart.products);
+  const subtotal:number= useSelector((state:any)=>state.cart.subtotal);
   
 
   useEffect(() => {
-    dispatch(getProducts());
-  }, [dispatch]);
+    dispatch(calculateTotal());
+  }, );
 
   
   

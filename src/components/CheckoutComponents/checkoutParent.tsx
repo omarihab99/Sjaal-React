@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CheckoutForm from './CheckoutForm'; 
+import CheckoutForm from './checkoutForm'; 
 import CheckoutProducts from './CheckoutProducts'; 
 
 

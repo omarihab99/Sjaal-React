@@ -3,7 +3,7 @@ import { IProduct } from '../../models/IProduct';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProductbyId, rateProduct } from '../../redux/slices/productSlice';
 import styles from '../../styles/productDetails.module.css';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { CartProduct } from '../../models/cart-product.model';
 import { addProductToCart, buyProductNow } from '../../redux/slices/CartSlice';
 import CustomCurrency from '../CartComponents/CustomCurrency';
@@ -18,6 +18,7 @@ const ProductDetails = () => {
     const [choosenSize, setchoosenSize] = useState("");
     const [avgRating, setAvgRating] = useState(0);
     const [hover, setHover] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (id) {
@@ -75,8 +76,11 @@ const ProductDetails = () => {
             image: product.images[0]
         }
         dispatch(addProductToCart(cartProduct));
+        navigate('/cart');
+
 
     }
+
 
     const buyItNow = () => {
         const cartProduct: CartProduct = {
@@ -89,7 +93,7 @@ const ProductDetails = () => {
             image: product.images[0]
         }
         dispatch(buyProductNow(cartProduct));
-
+        navigate('/checkout');
     }
 
     return (

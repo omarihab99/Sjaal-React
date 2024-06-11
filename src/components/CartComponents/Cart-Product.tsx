@@ -1,11 +1,11 @@
 import React , { useState } from 'react';
 import { CartProduct as CartProductModel } from '../../models/cart-product.model';
-import { incrementQuantity, decrementQuantity, removeProduct,handleUpdatedQuantity } from '../../redux/slices/CartSlice';
+import { incrementQuantity, decrementQuantity, removeProduct,handleUpdatedQuantity, updateProductQuantity } from '../../redux/slices/CartSlice';
 import CustomCurrency from './CustomCurrency';
 import { productsDispatch } from '../../hooks/productsHook'
 import cc from "../../Css/cartproduct.module.css"
 import { Link } from 'react-router-dom';
-import '../../Css/phiSign.css'
+import '../../Css/phiSign.css';
 
 
 
@@ -24,15 +24,15 @@ const CartProduct: React.FC<CartProductProps> = ({ product }) => {
 
   const handleIncrement = () => {
     console.log("incremmment by one in comp")
-    dispatch(incrementQuantity(product.id));
+    dispatch(incrementQuantity(product));
   };
   const handleDecrement = () => {
     console.log("dec  in comp")
-    dispatch(decrementQuantity(product.id));
+    dispatch(decrementQuantity(product));
   };
 
   const handleRemove = () => {
-    dispatch(removeProduct(product.id));
+    dispatch(removeProduct(product));
     console.log("remove in comp")
     
   };
@@ -44,7 +44,7 @@ const CartProduct: React.FC<CartProductProps> = ({ product }) => {
   };
 
   const handleQuantityBlur = () => {
-    dispatch(handleUpdatedQuantity({ productId:product.id, newQuantity: tempQuantity }));
+    dispatch(updateProductQuantity({ productId:product.id, newQuantity: tempQuantity }));
     setIsEditing(false);
   };
 

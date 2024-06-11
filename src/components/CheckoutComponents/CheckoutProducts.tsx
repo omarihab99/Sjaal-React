@@ -3,6 +3,8 @@ import CustomCurrency from '../CartComponents/CustomCurrency'
 import cla from "../../Css/checkoutProducts.module.css";
 import { productsDispatch, productsSelector } from '../../hooks/productsHook';
 import { calculateCheckoutTotal, calculateTotal, getProducts } from '../../redux/slices/CartSlice';
+import { useSelector } from 'react-redux';
+import { CartProduct } from '../../models/cart-product.model';
 
 
 
@@ -13,20 +15,19 @@ interface CheckoutProductsProps {
 const CheckoutProducts: React.FC<CheckoutProductsProps> = ({ shippingPrice }) => {
   const dispatch = productsDispatch();
 
-  const { products, subtotal, total } = productsSelector((state) => state.cart);
-
+  const { products, subtotal, total } = useSelector((state:any) => state.cart);
+  
 
   useEffect(() => {
-    dispatch(getProducts());
     dispatch(calculateTotal());
     dispatch(calculateCheckoutTotal(shippingPrice));
-  }, [shippingPrice, products, dispatch]);
+  },);
 
   return (
     <div className="container p-5 " style={{ marginTop: '5%', paddingRight: '0px',backgroundColor:"#f5f5f5" }}>
       <div className="row">
         <div>
-          {products.map((product, index) => (
+          {products.map((product:CartProduct, index:number) => (
             <div key={index} className="product d-flex justify-content-between mt-5">
 
               <div className="productData d-flex">

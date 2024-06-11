@@ -5,7 +5,7 @@ const Products = ({products}:{products:IProduct[]}) => {
     return (
 <div className="container d-flex">
 {products.map((product) => (
-                    <ProductCard
+                    <ProductCard key={product.id}
                         product={product}
                     />
 ))}

@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { IProduct } from "../../../../models/IProduct";
 import "./productCard.css";
 import CustomCurrency from "../CustomCurrency";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({product}:{product:IProduct}) => {
         const myImgRef = useRef<HTMLDivElement>(null);
@@ -59,9 +60,9 @@ const ProductCard = ({product}:{product:IProduct}) => {
                                 
                             </p>
                        
-                        <a href="/"
+                        <Link to={`/products/${product.id}`}
                                 style={{width: "100%",borderRadius: "0%",fontSize: "1.02rem",fontWeight: 400,height:45,paddingTop:9}}
-                                className="btn btn-outline-dark">choose options</a>
+                                className="btn btn-outline-dark">choose options</Link>
                         
                 </div>
         </div>
