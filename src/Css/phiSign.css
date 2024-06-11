@@ -1,0 +1,26 @@
+.disabled-button-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .phi-sign {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .disabled-button-container:hover .phi-sign {
+    opacity: 1;
+  }
+  
+  button[disabled] {
+    background-color: lightgray;
+    cursor: not-allowed;
+  }
+  
