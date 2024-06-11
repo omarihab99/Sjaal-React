@@ -2,11 +2,16 @@ import React from "react";
 import mainSectionStyles from "../../styles/mainsection.module.css";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
+
+
 const MainSection = () => {
+
+
   const mainSectionClasses = classNames(mainSectionStyles.mainSection, "w-100");
   const exploreButtonClasses = classNames(mainSectionStyles.exploreBtn, "btn", "btn-outline-light");
   return (
-    <div>
+    
+    <div >
       <section className={mainSectionClasses}>
         <div>
           {/*TODO: add background image path*/}
@@ -20,6 +25,8 @@ const MainSection = () => {
           </button>
         </div>
       </section>
+   
+
     </div>
   );
 };

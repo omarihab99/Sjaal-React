@@ -12,16 +12,23 @@ import {
   faTiktok,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-const Sidebar = () => {
+
+
+interface OffcanvasMenuProps {
+    show: boolean;
+    handleClose: () => void;
+}
+const Sidebar: React.FC<OffcanvasMenuProps> = ({ show, handleClose }) => {
+
   const homeTabs = useRef<HTMLDivElement>(null);
   const categoriesTab = useRef<HTMLDivElement>(null);
   const collectionsTabs = useRef<HTMLDivElement>(null);
   const [categories, setCategories] = useState([] as ICategory[]);
   const [selectedCategory, setSelectedCategory] = useState({} as ICategory);
   const [collections, setCollections] = useState([] as ICollection[]);
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+//   const [show, setShow] = useState(false);
+//   const handleClose = () => setShow(false);
+//   const handleShow = () => setShow(true);
   const navigate = useNavigate();
   const openCategories = () => {
     if (homeTabs.current) {
@@ -82,9 +89,10 @@ const Sidebar = () => {
     localStorage.setItem("collectionId", collectionId);
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+
+      {/* <Button variant="primary" onClick={handleShow}>
         Launch
-      </Button>
+      </Button> */}
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton></Offcanvas.Header>
         <Offcanvas.Body>

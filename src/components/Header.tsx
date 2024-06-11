@@ -11,6 +11,7 @@ import { red } from "@mui/material/colors";
 import { useSelector } from "react-redux";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import ReorderSharpIcon from "@mui/icons-material/ReorderSharp";
+import MainSection from '../components/Home/MainSection';
 
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Button } from "react-bootstrap";
@@ -37,6 +38,7 @@ const Header = () => {
 
 
                 {/* Use the OffcanvasMenu component */}
+                {/* <MainSection show={show} handleClose={handleClose} /> */}
                 <SideBar show={show} handleClose={handleClose} />
 
                 <Nav.Link as={Link} to="/" className="navbar-brand m-auto">
