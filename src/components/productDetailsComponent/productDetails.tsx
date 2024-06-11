@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import { CartProduct } from '../../models/cart-product.model';
 import { addProductToCart, buyProductNow } from '../../redux/slices/CartSlice';
 import CustomCurrency from '../CartComponents/CustomCurrency';
+import Recommendation from '../recommendation/recommendation';
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -178,13 +179,12 @@ const ProductDetails = () => {
                 </div>
             </div>
 
-            {/*
+            
     <div className="m-3">
-        <!-- You may also like component-->
         <h2>You May Also Like</h2>
-        <app-recommendation className="youMayAlsoLike"></app-recommendation>
+        <Recommendation></Recommendation>
     </div> 
-*/}
+
         </>
 
     )

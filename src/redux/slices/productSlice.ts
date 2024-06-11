@@ -38,7 +38,7 @@ export const fetchLimitedCollectionProducts = createAsyncThunk(
      * @returns {Promise<IProduct[]>} A promise that resolves to the fetched data.
      */
     async ({ collectionId, limit }: { collectionId: string; limit: number }): Promise<IProduct[]> => {
-        const response = await axios.get(`${URL}?collectionId=${collectionId}&_start=1&_limit=${limit}`); // Use axios.get
+        const response = await axios.get(`${URL}?collectionId=${collectionId}&_start=0&_limit=${limit}`); // Use axios.get
         return response.data;
     }
 )
