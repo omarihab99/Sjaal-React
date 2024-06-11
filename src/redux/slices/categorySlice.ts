@@ -15,13 +15,17 @@ import axios from "axios";
  */
 export const fetchCategories = createAsyncThunk(
     "categories/fetchCategories",
-    /**
-     * Fetch the categories from the JSON server.
-     * @return {Promise<ICategory[]>} A promise that resolves to the fetched data.
-     */
-    async (): Promise<ICategory[]> => {
-        const response = await axios.get<ICategory[]>(`http://localhost:3000/categories`); // Use axios.get
-        return response.data;
+    async () => {
+        /**
+         * Fetch the categories from the JSON server.
+         * @return {Promise<ICategory[]>} A promise that resolves to the fetched data.
+         */
+        const fetchData = async (): Promise<ICategory[]> => {
+            const response = await fetch("http://localhost:3000/category");
+            const data = await response.json();
+            return data;
+        };
+        return fetchData();
     }
 );
 /**
