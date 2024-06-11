@@ -6,7 +6,7 @@
       "name": "Black Linen Dress",
       "price": 850,
       "size": "L/XL",
-      "quantity": 1,
+      "quantity": 5,
       "image": "https://www.sjaaleg.com/cdn/shop/files/DSC04239.jpg?v=1712423813&width=823"
     },
     {
@@ -23,7 +23,7 @@
       "categoryId": 1,
       "name": "Adonis",
       "price": 200,
-      "quantity": 4,
+      "quantity": 5,
       "image": "https://www.sjaaleg.com/cdn/shop/products/3558338445.jpg?v=1685812038&width=300"
     }
   ]

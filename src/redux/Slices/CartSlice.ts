@@ -21,37 +21,46 @@ export const getProducts = createAsyncThunk<CartProduct[]>('cart/getProducts', a
   return response.data;
 });
 
+// Increment quantity with a maximum limit of 5
 export const incrementQuantity = createAsyncThunk<CartProduct, string>(
   'cart/incrementQuantity',
   async (productId: string) => {
-    // First, fetch the current product data
     const productResponse = await axios.get<CartProduct>(`${baseUrl}/${productId}`);
     const product = productResponse.data;
-
-    // Increment the quantity
-    const updatedProduct = { ...product, quantity: product.quantity + 1 };
-    
-    // Update the product in the backend
+    const updatedProduct = { ...product, quantity: product.quantity < 5 ? product.quantity + 1 : 5 };
     const response = await axios.put<CartProduct>(`${baseUrl}/${productId}`, updatedProduct);
-    
     return response.data;
   }
 );
 
+// Decrement quantity with a minimum limit of 1
 export const decrementQuantity = createAsyncThunk<CartProduct, string>(
   'cart/decrementQuantity',
   async (productId: string) => {
-    // First, fetch the current product data
     const productResponse = await axios.get<CartProduct>(`${baseUrl}/${productId}`);
     const product = productResponse.data;
-
-    // Decrement the quantity if greater than 1
     const updatedProduct = { ...product, quantity: product.quantity > 1 ? product.quantity - 1 : 1 };
-
-    // Update the product in the backend
     const response = await axios.put<CartProduct>(`${baseUrl}/${productId}`, updatedProduct);
-
     return response.data;
+  }
+);
+
+// Handle updated quantity received from the input
+export const handleUpdatedQuantity = createAsyncThunk<CartProduct, { productId: string, newQuantity: number }>(
+  'cart/handleUpdatedQuantity',
+  async ({ productId, newQuantity }) => {
+    const productResponse = await axios.get<CartProduct>(`${baseUrl}/${productId}`);
+    const product = productResponse.data;
+    if(newQuantity<=5){
+      const updatedProduct = { ...product, quantity: newQuantity };
+      const response = await axios.put<CartProduct>(`${baseUrl}/${productId}`, updatedProduct);
+      return response.data;
+    }
+    const updatedProduct = { ...product, quantity: 5};
+    const response = await axios.put<CartProduct>(`${baseUrl}/${productId}`, updatedProduct);
+    return response.data;
+    
+    
   }
 );
 
@@ -88,6 +97,14 @@ const cartSlice = createSlice({
         }
       })
       .addCase(decrementQuantity.fulfilled, (state, action: PayloadAction<CartProduct>) => {
+        const updatedProduct = action.payload;
+        const existingProductIndex = state.products.findIndex((p) => p.id === updatedProduct.id);
+        if (existingProductIndex !== -1) {
+          state.products[existingProductIndex] = updatedProduct;
+          cartSlice.caseReducers.calculateTotal(state);
+        }
+      })
+      .addCase(handleUpdatedQuantity.fulfilled, (state, action: PayloadAction<CartProduct>) => {
         const updatedProduct = action.payload;
         const existingProductIndex = state.products.findIndex((p) => p.id === updatedProduct.id);
         if (existingProductIndex !== -1) {

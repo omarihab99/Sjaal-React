@@ -15,7 +15,23 @@
 
 .rubish{
     background-color: white;
-    margin: 2px;
     border: 0;
+    flex-direction: column;
 
   }
+  .quantitySpan {
+    margin-top: 7px;
+   
+    cursor: pointer;
+    transition: transform 1.2s ease-in-out;
+  }
+  
+  .quantitySpan:hover {
+    transform: scale(1.5);
+  }
+  
+  .quantityInput {
+    width: 50px;
+    text-align: center;
+  }
+  

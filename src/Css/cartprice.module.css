@@ -1,0 +1,14 @@
+.button {
+    background-color: rgba(207, 192, 174, 1);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    padding: 0 3rem;
+    appearance: none;
+    text-decoration: none;
+  }
+  .h2 {
+    font-family: "Proza Libre", sans-serif;
+  }
+  

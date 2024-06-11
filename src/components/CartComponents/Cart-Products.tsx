@@ -7,6 +7,7 @@ import CartTitle from './Cart-Title';
 import YourCartEmpty from './CartEmpty';
 import { productsDispatch, productsSelector } from '../../hooks/productsHook';
 
+
 const CartProducts: React.FC = () => {
   const dispatch= productsDispatch();
   const { products, subtotal } = productsSelector((state) => state.cart);
@@ -32,7 +33,7 @@ const CartProducts: React.FC = () => {
           <thead style={{ borderBottom: '1px solid rgb(223, 217, 217)', opacity: 0.6, fontFamily: "'Proza Libre', sans-serif", fontSize: '9px', fontWeight: 'normal' }}>
             <tr className="d-flex justify-content-between">
               <td style={{ width: '60%' }}>PRODUCT</td>
-              <td style={{ width: '20%' }}>QUANTITY</td>
+              <td style={{ width: '15%' }}>QUANTITY</td>
               <td style={{ width: '10%' }}>TOTAL</td>
             </tr>
           </thead>
