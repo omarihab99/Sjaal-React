@@ -71,6 +71,35 @@ const cartSlice = createSlice({
         return total + price * quantity;
       }, 0);
     },
+
+    addProductToCart(state: CartState, action:PayloadAction<CartProduct>){
+      const product = action.payload      
+      const productIndex = state.products.findIndex((cartProduct)=> cartProduct.id === product.id);
+      if(productIndex !== -1){   
+        state.products[productIndex].quantity += product.quantity;
+        if(state.products[productIndex].quantity > 5){
+          alert("only 5 items of that product added")
+          state.products[productIndex].quantity = 5;
+        }
+      }
+      else{
+        state.products.push(product);
+      }
+      cartSlice.caseReducers.calculateTotal(state);       
+    },
+
+    buyProductNow(state: CartState, action:PayloadAction<CartProduct>){
+      state.products = [];
+      const product = action.payload;
+      if(product.quantity > 5){
+        alert("only 5 items of that product added")
+        product.quantity = 5;
+      }
+      state.products.push(product);
+      console.log(state.products.length);
+      
+    }
+    
   },
   extraReducers: (builder) => {
     builder
@@ -102,5 +131,5 @@ const cartSlice = createSlice({
   },
 });
 
-export const { calculateTotal } = cartSlice.actions;
+export const { calculateTotal, addProductToCart, buyProductNow } = cartSlice.actions;
 export default cartSlice.reducer;

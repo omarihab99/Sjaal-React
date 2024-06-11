@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { getProducts } from '../../redux/Slices/CartSlice';
+import { getProducts } from '../../redux/slices/CartSlice';
 import CartProduct from './Cart-Product';
 import CartPrice from './Cart-Price';
 import CartTitle from './Cart-Title';

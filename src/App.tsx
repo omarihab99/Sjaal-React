@@ -1,9 +1,11 @@
-import { lazy } from 'react';
+import { PersistGate } from 'redux-persist/integration/react';
+import { Suspense, lazy } from 'react';
 import './App.css';
 import { Provider } from 'react-redux';
-import store from './redux/store';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-const ProductDetails = lazy(() => import("./pages/ProductDetailsPage"))
+import {  RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { store, persistor } from './redux/store';
+
+const ProductDetails = lazy(() => import("./pages/ProductDetailsPage"));
 
 function App() {
   const router = createBrowserRouter([
@@ -16,13 +18,16 @@ function App() {
         }
       ]
     }
-  ])
+  ]);
 
   return (
     <Provider store={store}>
-      <RouterProvider router={router}></RouterProvider>
+      <PersistGate loading={null} persistor={persistor}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <RouterProvider router={router}></RouterProvider>
+        </Suspense>
+      </PersistGate>
     </Provider>
-
   );
 }
 
