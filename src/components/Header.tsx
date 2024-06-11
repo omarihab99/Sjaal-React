@@ -1,27 +1,14 @@
 import React from "react";
 import { useState } from 'react';
 
-import { Link, useNavigate } from "react-router-dom";
-import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import IconButton from "@mui/material/IconButton";
-import { red } from "@mui/material/colors";
-import { useSelector } from "react-redux";
-import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
-import ReorderSharpIcon from "@mui/icons-material/ReorderSharp";
-import MainSection from '../components/Home/MainSection';
 
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Button } from "react-bootstrap";
-import SideBar from "./SideBar";
+import Sidebar from './sidebar';
 const Header = () => {
-    // const navigate = useNavigate();
-
-    // const handleMoveToFav = () => {
-    //     navigate('/cart')
-    // }
+  
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -36,9 +23,7 @@ const Header = () => {
                     <span className="navbar-toggler-icon"></span>
                 </IconButton>
 
-
-               
-                <SideBar show={show} handleClose={handleClose} />
+                <Sidebar show={show} handleClose={handleClose} />
 
                 <Nav.Link as={Link} to="/" className="navbar-brand m-auto">
                     <img
