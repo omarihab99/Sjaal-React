@@ -3,6 +3,7 @@ import { ICategory } from "../../models/ICategory";
 import CollectionCard from "./collectionCard";
 import axios from "axios";
 import { ICollection } from "../../models/ICollection";
+
 const CategorySection = ({ category }: { category: ICategory }) => {
   const [collections, setCollections] = React.useState<ICollection[]>([]);
   useEffect(() => {

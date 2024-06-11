@@ -8,6 +8,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames";
 import collectionCardStyles from "../../styles/collectioncard.module.css";
+
+
 const CollectionCard = ({ collection }: { collection: ICollection }) => {
   const collectionContainerClasses = classNames(
     collectionCardStyles.collectionContainer,

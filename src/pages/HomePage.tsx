@@ -15,7 +15,7 @@ const HomePage = () => {
     const categories = useAppSelector(state => state.categories.categories);
     useEffect(() => {
         dispatch(fetchCategories());
-    }, []);
+    }, [dispatch]);
     return (
         <div className='my-main'>
                 <Outlet></Outlet>
