@@ -886,5 +886,35 @@
       "quantity": 1,
       "image": "/assets/images/BlackButtonedLinenSet.webp"
     }
+  ],
+  "feedback": [
+    {
+      "id": "",
+      "name": "Noura Ashraf",
+      "email": "20190592@stud.fci-cu.edu.eg",
+      "phone": "01125726669",
+      "comment": "wonderfull products"
+    },
+    {
+      "id": "e169371f-411d-42df-891d-2576a345624c",
+      "name": "Noura Ashraf",
+      "email": "20190592@stud.fci-cu.edu.eg",
+      "phone": "01125726669",
+      "comment": "wonderfull products WOOOOOW"
+    },
+    {
+      "id": "",
+      "name": "Noura Ashraf",
+      "email": "20190592@stud.fci-cu.edu.eg",
+      "phone": "01125726669",
+      "comment": "WOW"
+    },
+    {
+      "id": "",
+      "name": "Noura Ashraf",
+      "email": "20190592@stud.fci-cu.edu.eg",
+      "phone": "01125726669",
+      "comment": "WOW!!"
+    }
   ]
 }
