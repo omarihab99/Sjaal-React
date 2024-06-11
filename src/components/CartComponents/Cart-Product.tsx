@@ -1,6 +1,6 @@
 import React , { useState } from 'react';
 import { CartProduct as CartProductModel } from '../../models/cart-product.model';
-import { incrementQuantity, decrementQuantity, removeProduct,handleUpdatedQuantity } from '../../redux/Slices/CartSlice';
+import { incrementQuantity, decrementQuantity, removeProduct,handleUpdatedQuantity } from '../../redux/slices/CartSlice';
 import CustomCurrency from './CustomCurrency';
 import { productsDispatch } from '../../hooks/productsHook'
 import cc from "../../Css/cartproduct.module.css"

@@ -5,7 +5,7 @@ const CartTitle = () => {
     return (
         <div >
             <h1 >Your Order</h1>
-            <Link to="" className={classes.top}>Continue shopping</Link>
+            <Link to="/" className={classes.top}>Continue shopping</Link>
         </div>
     );
 }

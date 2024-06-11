@@ -3,7 +3,11 @@ import collectionSlice from "./slices/collectionSlice";
 import categorySlice from "./slices/categorySlice";
 import productSlice from "./slices/productSlice";
 import feedbackReducer from './slices/feedbackSlice';
+import cartReducer from './slices/CartSlice'
 
+
+
+ 
 /**
  * The store of the redux store.
  */
@@ -16,6 +20,7 @@ const store = configureStore({
         products: productSlice,
         collections: collectionSlice,
         feedback: feedbackReducer,
+        cart: cartReducer,
 
     },
 });
@@ -24,16 +29,4 @@ export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch= typeof store.dispatch;
 
 export default store;
-import { configureStore } from '@reduxjs/toolkit';
-import cartReducer from './Slices/CartSlice';
 
-const store = configureStore({
-  reducer: {
-    cart: cartReducer,
-  },
-});
-
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
-
-export default store;

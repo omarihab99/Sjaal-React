@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import CustomCurrency from '../CartComponents/CustomCurrency'
 import cla from "../../Css/checkoutProducts.module.css";
 import { productsDispatch, productsSelector } from '../../hooks/productsHook';
-import { calculateCheckoutTotal, calculateTotal, getProducts } from '../../redux/Slices/CartSlice';
+import { calculateCheckoutTotal, calculateTotal, getProducts } from '../../redux/slices/CartSlice';
 
 
 

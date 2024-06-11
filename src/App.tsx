@@ -10,6 +10,8 @@ import NotFound from './pages/NotFound';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Header from './components/Header';
+import CartPage from './pages/CartPage';
+import Checkout from './pages/CheckoutPage';
 const CollectionsPage = lazy(() => import('./pages/CollectionsPage'));
 
 function App() {
@@ -23,7 +25,17 @@ function App() {
     {
       path: "/collections",
       element: <CollectionsPage />,
-    }
+    },{
+      path: "/cart",
+      element: <CartPage/>,
+      
+  
+      },{
+        path: "/checkout",
+        element: <Checkout/>,
+        
+    
+        },
 ]);
 
   return (

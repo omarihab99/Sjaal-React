@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { ICollection } from "../../models/ICollection";
-const URL = "http://localhost:3000/collections";
 import axios from "axios";
+
+const URL = "http://localhost:3000/collections";
 /**
  * This is the action responsible for fetching collections.
  */
