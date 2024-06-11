@@ -1,0 +1,21 @@
+
+
+a:hover{
+    background-color: white;
+    border-width:2px ;
+    color: black;
+}
+
+#title:hover{
+    text-decoration: underline;
+}
+
+#productImg{
+    background-size: cover;
+    transition: 0.8s ease-out;
+}
+
+#productImg:hover{
+    background-size: 85%;
+    
+}

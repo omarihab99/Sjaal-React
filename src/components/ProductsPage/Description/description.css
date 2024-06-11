@@ -1,0 +1,25 @@
+#description-p{
+    font-family: Assistant, sans-serif;
+     width: 38%;
+     font-weight: 400;
+     font-size: 18px;
+     word-spacing: 2px;
+     color: #5a5858;
+     line-height:2.4em ;
+}
+
+#description-h{
+    font-family:'Proza Libre', sans-serif;
+    font-weight: 100;
+}
+
+#divP{
+    margin-top: 1%;
+    padding: 0%;
+}
+
+.container{
+    margin-left: 2.5%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}

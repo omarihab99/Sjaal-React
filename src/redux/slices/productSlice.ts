@@ -14,9 +14,15 @@ export const fetchProductsByCollectionId = createAsyncThunk(
      * @param collectionId - The id of the collection to fetch products from.
      * @returns {Promise<IProduct[]>} A promise that resolves to the fetched data.
      */
-    async (collectionId: string): Promise<IProduct[]> => {
-        const response = await axios.get(`${URL}?collectionId=${collectionId}`); // Use axios.get
-        return response.data;
+    async (collectionId: string) => {
+        try {
+            const response = await axios.get(`${URL}?collectionId=${collectionId}`);
+            console.log(response);
+            
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
     }
 );
 /**
