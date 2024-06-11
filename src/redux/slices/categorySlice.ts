@@ -8,6 +8,7 @@
  */
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { ICategory } from "../../models/ICategory";
+import axios from "axios";
 /**
  * Create an async thunk to fetch categories from the JSON server.
  * The thunk returns a promise that resolves to the fetched data.

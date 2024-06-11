@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { ICollection } from "../../models/ICollection";
 const URL = "http://localhost:3000/collections";
+import axios from "axios";
 /**
  * This is the action responsible for fetching collections.
  */
@@ -11,9 +12,8 @@ export const fetchCollection  = createAsyncThunk(
      * @returns {Promise<ICollection[]>} A promise that resolves to the fetched data.
      */
     async (): Promise<ICollection[]> => {
-        const response = await fetch(URL);
-        const data = await response.json();
-        return data;
+       const reponse  = await axios.get<ICollection[]>(URL);
+       return reponse.data;
     }
 )
 /**
@@ -28,9 +28,8 @@ export const getCollectionByCategoryId = createAsyncThunk(
      * @returns {Promise<ICollection>} A promise that resolves to the fetched data.
      */
     async (categoryId: string): Promise<ICollection> => {
-        const response = await fetch(`${URL}?categoryId=${categoryId}`);
-        const data = await response.json();
-        return data;
+        const response = await axios.get<ICollection>(`${URL}?categoryId=${categoryId}`); // Use axios.get
+        return response.data;
     }
 )
 const initialState = {

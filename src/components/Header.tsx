@@ -15,7 +15,7 @@ import MainSection from '../components/Home/MainSection';
 
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Button } from "react-bootstrap";
-import SideBar from "./SideBar";
+import SideBar from "./sidebar";
 const Header = () => {
     // const navigate = useNavigate();
 
