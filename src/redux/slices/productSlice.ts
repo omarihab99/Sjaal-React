@@ -14,15 +14,10 @@ export const fetchProductsByCollectionId = createAsyncThunk(
      * @param collectionId - The id of the collection to fetch products from.
      * @returns {Promise<IProduct[]>} A promise that resolves to the fetched data.
      */
-    async (collectionId: string) => {
-        try {
-            const response = await axios.get(`${URL}?collectionId=${collectionId}`);
-            console.log(response);
-            
-            return response.data;
-        } catch (error) {
-            throw error;
-        }
+    async (collectionId: string): Promise<IProduct[]> => {
+        const response = await axios.get<IProduct[]>(`${URL}?collectionId=${collectionId}`); // Use axios.get
+        return response.data;
+
     }
 );
 /**
@@ -38,7 +33,8 @@ export const fetchLimitedCollectionProducts = createAsyncThunk(
      * @returns {Promise<IProduct[]>} A promise that resolves to the fetched data.
      */
     async ({ collectionId, limit }: { collectionId: string; limit: number }): Promise<IProduct[]> => {
-        const response = await axios.get(`${URL}?collectionId=${collectionId}&_start=0&_limit=${limit}`); // Use axios.get
+        const response = await axios.get<IProduct[]>(`${URL}?collectionId=${collectionId}&_start=1&_limit=${limit}`); // Use axios.get
+
         return response.data;
     }
 )
@@ -54,7 +50,7 @@ export const getProductbyId = createAsyncThunk(
      * @returns {Promise<IProduct>} A promise that resolves to the fetched data.
      */
     async (id: string): Promise<IProduct> => {
-        const response = await axios.get(`${URL}/${id}`); // Use axios.get
+        const response = await axios.get<IProduct>(`${URL}/${id}`); // Use axios.get
         return response.data;
     }
 )
@@ -68,7 +64,7 @@ export const fetchProducts = createAsyncThunk(
      * @returns {Promise<IProduct[]>} A promise that resolves to the fetched data.
      */
     async (): Promise<IProduct[]> => {
-        const response = await axios.get(URL); // Use axios.get
+        const response = await axios.get<IProduct[]>(URL); // Use axios.get
         return response.data;
     }
 )

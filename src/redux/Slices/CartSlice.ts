@@ -6,12 +6,18 @@ interface CartState {
   products: CartProduct[];
   status: 'idle' | 'loading' | 'succeeded' | 'failed';
   subtotal: number;
+  total: number;
+  shippingPrice: number;
+
 }
 
 const initialState: CartState = {
   products: [],
   status: 'idle',
   subtotal: 0,
+  total: 0,
+  shippingPrice: 0,
+
 };
 
 const baseUrl = 'http://localhost:3000/cart';
@@ -21,37 +27,48 @@ export const getProducts = createAsyncThunk<CartProduct[]>('cart/getProducts', a
   return response.data;
 });
 
+// Increment quantity with a maximum limit of 5
 export const incrementQuantity = createAsyncThunk<CartProduct, string>(
   'cart/incrementQuantity',
   async (productId: string) => {
-    // First, fetch the current product data
     const productResponse = await axios.get<CartProduct>(`${baseUrl}/${productId}`);
     const product = productResponse.data;
-
-    // Increment the quantity
-    const updatedProduct = { ...product, quantity: product.quantity + 1 };
-    
-    // Update the product in the backend
+    const updatedProduct = { ...product, quantity: product.quantity < 5 ? product.quantity + 1 : 5 };
     const response = await axios.put<CartProduct>(`${baseUrl}/${productId}`, updatedProduct);
-    
+
     return response.data;
   }
 );
 
+// Decrement quantity with a minimum limit of 1
 export const decrementQuantity = createAsyncThunk<CartProduct, string>(
   'cart/decrementQuantity',
   async (productId: string) => {
-    // First, fetch the current product data
     const productResponse = await axios.get<CartProduct>(`${baseUrl}/${productId}`);
     const product = productResponse.data;
-
-    // Decrement the quantity if greater than 1
     const updatedProduct = { ...product, quantity: product.quantity > 1 ? product.quantity - 1 : 1 };
-
-    // Update the product in the backend
     const response = await axios.put<CartProduct>(`${baseUrl}/${productId}`, updatedProduct);
-
     return response.data;
+  }
+);
+
+// Handle updated quantity received from the input
+export const handleUpdatedQuantity = createAsyncThunk<CartProduct, { productId: string, newQuantity: number }>(
+  'cart/handleUpdatedQuantity',
+  async ({ productId, newQuantity }) => {
+    const productResponse = await axios.get<CartProduct>(`${baseUrl}/${productId}`);
+    const product = productResponse.data;
+    if(newQuantity<=5){
+      const updatedProduct = { ...product, quantity: newQuantity };
+      const response = await axios.put<CartProduct>(`${baseUrl}/${productId}`, updatedProduct);
+      return response.data;
+    }
+    const updatedProduct = { ...product, quantity: 5};
+    const response = await axios.put<CartProduct>(`${baseUrl}/${productId}`, updatedProduct);
+    return response.data;
+    
+    
+
   }
 );
 
@@ -71,6 +88,11 @@ const cartSlice = createSlice({
         return total + price * quantity;
       }, 0);
     },
+    calculateCheckoutTotal(state, action: PayloadAction<number>) {
+      state.shippingPrice = action.payload;
+      state.total = state.subtotal + state.shippingPrice;
+    }
+  
 
     addProductToCart(state: CartState, action:PayloadAction<CartProduct>){
       const product = action.payload      
@@ -124,6 +146,15 @@ const cartSlice = createSlice({
           cartSlice.caseReducers.calculateTotal(state);
         }
       })
+      .addCase(handleUpdatedQuantity.fulfilled, (state, action: PayloadAction<CartProduct>) => {
+        const updatedProduct = action.payload;
+        const existingProductIndex = state.products.findIndex((p) => p.id === updatedProduct.id);
+        if (existingProductIndex !== -1) {
+          state.products[existingProductIndex] = updatedProduct;
+          cartSlice.caseReducers.calculateTotal(state);
+        }
+      })
+
       .addCase(removeProduct.fulfilled, (state, action: PayloadAction<string>) => {
         state.products = state.products.filter((product) => product.id !== action.payload);
         cartSlice.caseReducers.calculateTotal(state);
@@ -131,5 +162,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const { calculateTotal, addProductToCart, buyProductNow } = cartSlice.actions;
+
+export const { calculateTotal, addProductToCart, buyProductNow, calculateCheckoutTotal } = cartSlice.actions;
 export default cartSlice.reducer;

@@ -1,0 +1,67 @@
+.container {
+    padding: 20px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    padding: 20px;
+}
+
+h5 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+h5,
+h6 {
+    margin-top: 20px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 5px;
+}
+
+.form-check-input {
+    border-color: rgb(185, 182, 182);
+    height: 20px;
+    margin-right: 10px;
+    width: 20px;
+    border-radius: 10%;
+}
+
+.form-check-label {
+    font-size: 14px;
+}
+
+.form-floating {
+    margin-bottom: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+p {
+    font-size: 14px;
+}
+.shippingMethod{
+    
+    background-color:#f0f5ff ;
+    border: 1px rgb(241, 237, 237) solid;
+    padding: 15px;
+    width: 96%;
+    height: 55px;
+    margin-left: 1px;
+    border-radius: 5px;
+    color:#1773b0
+}

@@ -5,12 +5,15 @@ import storage from "redux-persist/lib/storage";
 import collectionSlice from "./slices/collectionSlice";
 import categorySlice from "./slices/categorySlice";
 import productSlice from "./slices/productSlice";
-import cartReducer from './slices/CartSlice';
+import feedbackReducer from './slices/feedbackSlice';
+import cartReducer from './slices/CartSlice'
+
 
 const rootReducer = combineReducers({
   categories: categorySlice,
   products: productSlice,
   collections: collectionSlice,
+  feedback: feedbackReducer,
   cart: cartReducer,
   
 });
@@ -21,6 +24,7 @@ const persistConfig = {
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
+
 
 export const store = configureStore({
   reducer: persistedReducer,

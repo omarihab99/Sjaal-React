@@ -1,8 +1,18 @@
 import { PersistGate } from 'redux-persist/integration/react';
 import { Suspense, lazy } from 'react';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import store from './redux/store';
+import { lazy, Suspense } from 'react';
+import HomePage from './pages/HomePage';
+
+import NotFound from './pages/NotFound';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import {  RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Header from './components/Header';
+import CartPage from './pages/CartPage';
+import Checkout from './pages/CheckoutPage';
+const CollectionsPage = lazy(() => import('./pages/CollectionsPage'));
 import { store, persistor } from './redux/store';
 
 const ProductDetails = lazy(() => import("./pages/ProductDetailsPage"));
@@ -10,15 +20,32 @@ const ProductDetails = lazy(() => import("./pages/ProductDetailsPage"));
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/',
-      children: [
+      path: "/",
+      element: <HomePage/>,
+      errorElement: <NotFound/>,
+  
+      },
+    {
+      path: "/collections",
+      element: <CollectionsPage />,
+    },{
+      path: "/cart",
+      element: <CartPage/>,
+      
+  
+      },{
+        path: "/checkout",
+        element: <Checkout/>,
+        
+    
+        },
         {
           path: 'products/:id',
           element: <ProductDetails></ProductDetails>
         }
-      ]
-    }
-  ]);
+]);
+
+ 
 
   return (
     <Provider store={store}>

@@ -3,6 +3,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import CustomCurrency from './CustomCurrency';
 
+import cs from "../../Css/cartprice.module.css"
+import Enlarge from './Enlarge';
 
 
 
@@ -39,6 +41,11 @@ return (
       >
         Taxes and shipping calculated at checkout
       </p>
+      <Enlarge>
+      <button
+        type="button"
+        style={{ width: '350px', height: '50px' ,backgroundColor:"#d6c3b6" }}
+        className={cs.button}
       <button
         type="button"
         style={{ width: '350px', height: '50px' ,backgroundColor:"#d6c3b6" }}
@@ -47,6 +54,8 @@ return (
       >
         Check out
       </button>
+      </Enlarge>
+
     </div>
   );
 };

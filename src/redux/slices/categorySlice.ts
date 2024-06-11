@@ -8,6 +8,7 @@
  */
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { ICategory } from "../../models/ICategory";
+import axios from "axios";
 /**
  * Create an async thunk to fetch categories from the JSON server.
  * The thunk returns a promise that resolves to the fetched data.
@@ -20,7 +21,7 @@ export const fetchCategories = createAsyncThunk(
          * @return {Promise<ICategory[]>} A promise that resolves to the fetched data.
          */
         const fetchData = async (): Promise<ICategory[]> => {
-            const response = await fetch("http://localhost:3000/categories");
+            const response = await fetch("http://localhost:3000/category");
             const data = await response.json();
             return data;
         };
