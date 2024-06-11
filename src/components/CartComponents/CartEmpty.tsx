@@ -4,6 +4,7 @@ import clas from "../../Css/CartEmpty.module.css"
 import Enlarge from './Enlarge';
 
 
+
 const CartEmpty = () => {
     return (
         <div>
@@ -15,6 +16,7 @@ const CartEmpty = () => {
                     Continue Shopping
                 </button>
             </Enlarge>
+
             </Link>
             <br/><br/><br/>
         </div>

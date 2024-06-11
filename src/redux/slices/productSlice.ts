@@ -17,6 +17,7 @@ export const fetchProductsByCollectionId = createAsyncThunk(
     async (collectionId: string): Promise<IProduct[]> => {
         const response = await axios.get<IProduct[]>(`${URL}?collectionId=${collectionId}`); // Use axios.get
         return response.data;
+
     }
 );
 /**
@@ -33,6 +34,7 @@ export const fetchLimitedCollectionProducts = createAsyncThunk(
      */
     async ({ collectionId, limit }: { collectionId: string; limit: number }): Promise<IProduct[]> => {
         const response = await axios.get<IProduct[]>(`${URL}?collectionId=${collectionId}&_start=1&_limit=${limit}`); // Use axios.get
+
         return response.data;
     }
 )
@@ -66,6 +68,20 @@ export const fetchProducts = createAsyncThunk(
         return response.data;
     }
 )
+
+interface RateProductPayload {
+    id: string;
+    rates: number[];
+  }
+  
+export const rateProduct = createAsyncThunk(
+    'products/rateProduct',
+    async ({ id, rates }: RateProductPayload) => {
+      const response = await axios.patch(`${URL}/${id}`, { rates });
+      return response.data;
+    }
+);
+
 /**
  * The initial state of the products slice
  */
@@ -92,7 +108,12 @@ const initialState = {
 const productSlice = createSlice({
     name: "products",
     initialState,
-    reducers: {},
+    reducers: {
+        rateProduct(state, action){
+            state.product.rates.push(action.payload);
+            return state
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchProducts.pending, (state) => {
@@ -134,6 +155,22 @@ const productSlice = createSlice({
             })
             .addCase(getProductbyId.rejected, (state, action) => {
                 state.status = "failed";
+            })
+            .addCase(rateProduct.pending, (state) => {
+                state.status = 'loading';
+              })
+            .addCase(rateProduct.fulfilled, (state, action) => {
+                state.status = 'succeeded';
+                const updatedProduct = action.payload;
+                state.products = state.products.map((product) =>
+                  product.id === updatedProduct.id ? updatedProduct : product
+                );
+                if (state.product?.id === updatedProduct.id) {
+                  state.product = updatedProduct;
+                }
+              })
+              .addCase(rateProduct.rejected, (state, action) => {
+                state.status = 'failed';
             });
     },
 });

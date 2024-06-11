@@ -1,0 +1,21 @@
+.name{
+    
+    flex-wrap: wrap;
+ 
+    padding: 0%;
+    color: black;
+     font-family: 'Proza Libre', sans-serif;
+     text-decoration: none;
+
+}
+.name:hover{
+    text-decoration: underline solid 2px ;
+   
+}
+
+.rubish{
+    background-color: white;
+    margin: 2px;
+    border: 0;
+
+  }

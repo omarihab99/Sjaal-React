@@ -34,6 +34,7 @@ const CartProducts: React.FC = () => {
             <tr className="d-flex justify-content-between">
               <td style={{ width: '60%' }}>PRODUCT</td>
               <td style={{ width: '15%' }}>QUANTITY</td>
+
               <td style={{ width: '10%' }}>TOTAL</td>
             </tr>
           </thead>

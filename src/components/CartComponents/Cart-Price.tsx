@@ -7,6 +7,7 @@ import cs from "../../Css/cartprice.module.css"
 import Enlarge from './Enlarge';
 
 
+
 interface CartTotalPriceProps {
     subtotal: number;
   }
@@ -45,11 +46,16 @@ return (
         type="button"
         style={{ width: '350px', height: '50px' ,backgroundColor:"#d6c3b6" }}
         className={cs.button}
+      <button
+        type="button"
+        style={{ width: '350px', height: '50px' ,backgroundColor:"#d6c3b6" }}
+        className="button"
         onClick={handleCheckout}
       >
         Check out
       </button>
       </Enlarge>
+
     </div>
   );
 };

@@ -8,6 +8,7 @@ interface CartState {
   subtotal: number;
   total: number;
   shippingPrice: number;
+
 }
 
 const initialState: CartState = {
@@ -16,6 +17,7 @@ const initialState: CartState = {
   subtotal: 0,
   total: 0,
   shippingPrice: 0,
+
 };
 
 const baseUrl = 'http://localhost:3000/cart';
@@ -33,6 +35,7 @@ export const incrementQuantity = createAsyncThunk<CartProduct, string>(
     const product = productResponse.data;
     const updatedProduct = { ...product, quantity: product.quantity < 5 ? product.quantity + 1 : 5 };
     const response = await axios.put<CartProduct>(`${baseUrl}/${productId}`, updatedProduct);
+
     return response.data;
   }
 );
@@ -65,6 +68,7 @@ export const handleUpdatedQuantity = createAsyncThunk<CartProduct, { productId: 
     return response.data;
     
     
+
   }
 );
 
@@ -89,6 +93,35 @@ const cartSlice = createSlice({
       state.total = state.subtotal + state.shippingPrice;
     }
   
+
+    addProductToCart(state: CartState, action:PayloadAction<CartProduct>){
+      const product = action.payload      
+      const productIndex = state.products.findIndex((cartProduct)=> cartProduct.id === product.id);
+      if(productIndex !== -1){   
+        state.products[productIndex].quantity += product.quantity;
+        if(state.products[productIndex].quantity > 5){
+          alert("only 5 items of that product added")
+          state.products[productIndex].quantity = 5;
+        }
+      }
+      else{
+        state.products.push(product);
+      }
+      cartSlice.caseReducers.calculateTotal(state);       
+    },
+
+    buyProductNow(state: CartState, action:PayloadAction<CartProduct>){
+      state.products = [];
+      const product = action.payload;
+      if(product.quantity > 5){
+        alert("only 5 items of that product added")
+        product.quantity = 5;
+      }
+      state.products.push(product);
+      console.log(state.products.length);
+      
+    }
+    
   },
   extraReducers: (builder) => {
     builder
@@ -121,6 +154,7 @@ const cartSlice = createSlice({
           cartSlice.caseReducers.calculateTotal(state);
         }
       })
+
       .addCase(removeProduct.fulfilled, (state, action: PayloadAction<string>) => {
         state.products = state.products.filter((product) => product.id !== action.payload);
         cartSlice.caseReducers.calculateTotal(state);
@@ -128,5 +162,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const { calculateTotal,calculateCheckoutTotal} = cartSlice.actions;
+
+export const { calculateTotal, addProductToCart, buyProductNow, calculateCheckoutTotal } = cartSlice.actions;
 export default cartSlice.reducer;
