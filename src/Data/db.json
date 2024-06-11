@@ -1,14 +1,6 @@
 {
   "cart": [
-    {
-      "id": "1",
-      "categoryId": 1,
-      "name": "Black Linen Dress",
-      "price": 850,
-      "size": "L/XL",
-      "quantity": 5,
-      "image": "https://www.sjaaleg.com/cdn/shop/files/DSC04239.jpg?v=1712423813&width=823"
-    },
+    
     {
       "id": "2",
       "categoryId": 1,
@@ -18,6 +10,16 @@
       "quantity": 1,
       "image": "https://www.sjaaleg.com/cdn/shop/files/20240228-DSC03455.jpg?v=1709198773&width=300"
     },
+    {
+      "id": "1",
+      "categoryId": 1,
+      "name": "Black Linen Dress",
+      "price": 850,
+      "size": "L/XL",
+      "quantity": 5,
+      "image": "https://www.sjaaleg.com/cdn/shop/files/DSC04239.jpg?v=1712423813&width=823"
+    },
+
     {
       "id": "3",
       "categoryId": 1,

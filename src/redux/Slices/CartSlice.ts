@@ -6,12 +6,16 @@ interface CartState {
   products: CartProduct[];
   status: 'idle' | 'loading' | 'succeeded' | 'failed';
   subtotal: number;
+  total: number;
+  shippingPrice: number;
 }
 
 const initialState: CartState = {
   products: [],
   status: 'idle',
   subtotal: 0,
+  total: 0,
+  shippingPrice: 0,
 };
 
 const baseUrl = 'http://localhost:3000/cart';
@@ -80,6 +84,11 @@ const cartSlice = createSlice({
         return total + price * quantity;
       }, 0);
     },
+    calculateCheckoutTotal(state, action: PayloadAction<number>) {
+      state.shippingPrice = action.payload;
+      state.total = state.subtotal + state.shippingPrice;
+    }
+  
   },
   extraReducers: (builder) => {
     builder
@@ -119,5 +128,5 @@ const cartSlice = createSlice({
   },
 });
 
-export const { calculateTotal } = cartSlice.actions;
+export const { calculateTotal,calculateCheckoutTotal} = cartSlice.actions;
 export default cartSlice.reducer;
