@@ -21,5 +21,6 @@ export interface IProduct {
     availableQuantaties: number;
     description: string;
     images: string[];
+    rates:number[];
 }
 

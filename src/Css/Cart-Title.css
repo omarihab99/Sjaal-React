@@ -1,0 +1,19 @@
+.top-right-title {
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    color:black;
+    text-underline-offset: .3rem;
+    text-decoration-thickness: .1rem;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    margin: 12px;
+    font-family: 'Proza Libre', sans-serif;
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: lighter;
+}
+.top-right-title:hover{
+    text-decoration: underline solid 2px;
+  }

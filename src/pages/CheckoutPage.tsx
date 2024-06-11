@@ -1,5 +1,4 @@
 
-
 const CheckoutPage = () => {
     return (
         <div>
