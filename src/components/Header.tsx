@@ -5,14 +5,17 @@ import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import IconButton from "@mui/material/IconButton";
+import { CartProduct as CartProductModel} from '../models/cart-product.model';
 
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Button } from "react-bootstrap";
 import Sidebar from "./sidebar";
+import { useSelector } from "react-redux";
 const Header = () => {
   
-    const [show, setShow] = useState(false);
+    const products:CartProductModel[] = useSelector((state:any)=>state.cart.products);
 
+    const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
@@ -62,7 +65,7 @@ const Header = () => {
                         />
                     </svg>
                     <span className="position-absolute translate-middle badge rounded-pill bg-primary">
-                        3
+                        {products.length}
                     </span>
                 </Nav.Link>
             </div>
