@@ -1,5 +1,6 @@
 import { IProduct } from "../../../../models/IProduct";
 import ProductCard from "../ProductCard/productCard";
+import './products.css';
 
 const Products = ({products}:{products:IProduct[]}) => {
     return (
