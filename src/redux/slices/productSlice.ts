@@ -42,6 +42,45 @@ export const fetchLimitedCollectionProducts = createAsyncThunk(
         return response.data;
     }
 )
+
+/**
+ * This is the action responsible for fetching products by its collection id and products limit.
+ * @param collectionId - The id of the collection to fetch products from.
+ */
+export const fetchAlphabeticallySortedProducts = createAsyncThunk(
+    "products/fetchAlphabeticallySortedProducts",
+    /**
+     * Fetch the products from the JSON server by collection id and limit.
+     * @param {collectionId} - The id of the collection to fetch products 
+     * @returns {Promise<IProduct[]>} A promise that resolves to the fetched data.
+     */
+    async (collectionId: string|undefined): Promise<IProduct[]> => {
+        const response = await axios.get<IProduct[]>(`${URL}?collectionId=${collectionId}&_sort=name`); // Use axios.get
+
+        return response.data;
+    }
+)
+
+/**
+ * This is the action responsible for fetching products by its collection id and products limit.
+ * @param collectionId - The id of the collection to fetch products from.
+ */
+export const fetchPriceSortedProducts = createAsyncThunk(
+    "products/fetchPriceSortedProducts",
+    /**
+     * Fetch the products from the JSON server by collection id and limit.
+     * @param {collectionId} - The id of the collection to fetch products 
+     * @returns {Promise<IProduct[]>} A promise that resolves to the fetched data.
+     */
+    async (collectionId: string|undefined): Promise<IProduct[]> => {
+        const response = await axios.get<IProduct[]>(`${URL}?collectionId=${collectionId}&_sort=price`); // Use axios.get
+
+        return response.data;
+    }
+)
+
+
+
 /**
  * This is the action responsible for getting a product by its id.
  * @param {productId} - The id of the product to be fetched.
@@ -175,6 +214,12 @@ const productSlice = createSlice({
               })
               .addCase(rateProduct.rejected, (state, action) => {
                 state.status = 'failed';
+            }).addCase(fetchAlphabeticallySortedProducts.fulfilled, (state, action) => {
+                state.status = "succeeded";
+                state.products = action.payload;
+            }).addCase(fetchPriceSortedProducts.fulfilled, (state, action) => {
+                state.status = "succeeded";
+                state.products = action.payload;
             });
     },
 });

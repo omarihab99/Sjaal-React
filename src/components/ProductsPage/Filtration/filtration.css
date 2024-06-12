@@ -26,3 +26,7 @@
     .margin-10{
         margin-left: 10%;
     }
+
+    .dropdown-item{
+        font-size: small;
+    }

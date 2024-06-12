@@ -130,7 +130,7 @@
       "id": "1",
       "collectionId": "1",
       "name": "Black Linen Dress",
-      "price": 850,
+      "price": 950,
       "availableSizes": [
         "S/M",
         "L/XL"
@@ -178,7 +178,7 @@
       "id": "3",
       "collectionId": "1",
       "name": "Olive Linen Dress",
-      "price": 850,
+      "price": 970,
       "availableSizes": [
         "S/M",
         "L/XL"
@@ -202,7 +202,7 @@
       "id": "4",
       "collectionId": "1",
       "name": "Cashmere Linen Dress",
-      "price": 850,
+      "price": 650,
       "availableSizes": [
         "S/M",
         "L/XL"

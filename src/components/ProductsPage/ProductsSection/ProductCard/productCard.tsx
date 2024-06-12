@@ -36,10 +36,10 @@ const ProductCard = ({product}:{product:IProduct}) => {
         }, [product]);
     
     return (
-        <div>
+        <div style={{marginRight:20}}>
             <div className="container">
                 {/* width: "18rem", */}
-        <div className="card" style={{borderRadius: "0%",border: "none",width: 305}}>
+        <div className="card" style={{borderRadius: "0%",border: "none",width: 290}}>
            
                        <div id="productImg"
                        ref={myImgRef}
