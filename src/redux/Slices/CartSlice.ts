@@ -111,7 +111,7 @@ const cartSlice = createSlice({
     },
     removeProduct(state, action){
         const product = action.payload;
-        state.products =  state.products.filter((product)=> product !== product);
+        state.products =  state.products.filter((p)=> p.id !== product.id);
         return state;
     },
     calculateTotal(state) {
