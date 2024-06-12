@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchProductsByCollectionId } from "../redux/slices/productSlice";
 import { IProduct } from "../models/IProduct";
-import { productsDispatch, productsSelector, productsSelector } from "../hooks/productsHook";
+import { productsDispatch, productsSelector } from "../hooks/productsHook";
 import { getCollectionById } from "../redux/slices/collectionSlice";
 import Description from "../components/ProductsPage/Description/description";
 import Filtration from "../components/ProductsPage/Filtration/filtration";
@@ -59,7 +59,7 @@ const ProductsPage = () => {
     };
 
     return (
-        <div style={{marginLeft: "4%", marginTop: "5%"}}>
+        <div style={{ marginTop: "5%", width:"100%", marginLeft:"10%"}}>
              <Description description={description} collName={collectionName}></Description>
             <Filtration length={length} collId={CollectionId} filter={handleFilteredData} products={productsArr}></Filtration>
             <Products products={filteredData.length > 0 ? filteredData : productsArr}></Products>

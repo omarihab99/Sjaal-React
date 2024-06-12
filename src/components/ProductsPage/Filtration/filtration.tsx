@@ -15,7 +15,7 @@ const Filtration = ({ length, collId, filter, products }: { length: number; coll
             setAlphabeticArr(alphabeticSorted);
             setPriceArr(priceSorted);
             setReversedAlphabeticArr([...alphabeticSorted].reverse());
-            setReversedAlphabeticArr([...priceSorted].reverse());
+            setReversedPriceArr([...priceSorted].reverse());
         }
     }, [products]);
 
