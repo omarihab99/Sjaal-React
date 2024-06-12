@@ -7,3 +7,7 @@
 .my-content {
   flex-grow: 1;
 }
+
+.my-bg{
+  background-color: #d6c3b6;
+}

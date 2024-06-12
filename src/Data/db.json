@@ -1101,6 +1101,23 @@
     }
   ],
   "order": [
-    
+    {
+      "id": "",
+      "email": "20190592@stud.fci-cu.edu.eg",
+      "notifyMe": false,
+      "country": "Egypt",
+      "fName": "Noura",
+      "lName": "Ashraf",
+      "address": "Giza",
+      "apartment": "",
+      "city": "Giza",
+      "governorate": "AST",
+      "pCode": "12942",
+      "phone": "01125726669",
+      "nextTime": false,
+      "shippingCity": true,
+      "sameAddress": false,
+      "totalPrice": 900
+    }
   ]
 }
