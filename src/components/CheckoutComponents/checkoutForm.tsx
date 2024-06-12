@@ -1,11 +1,15 @@
 
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import { governorateArr } from '../../utils/governorateArr';
 import { shippingMethodArr } from '../../utils/shippingMethodArr';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import classes from '../styles/CheckoutForm.module.css';
 import Order from '../../models/IOrder'
 import { productsSelector } from '../../hooks/productsHook';
+import { submitOrder } from '../../redux/slices/orderSlice';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../redux/store';
+import { calculateCheckoutTotal, removeAllProducts } from '../../redux/slices/CartSlice';
 interface CheckoutFormProps {
   onShippingPriceChange: (price: number) => void;
 
@@ -14,7 +18,7 @@ interface CheckoutFormProps {
 
 
 const CheckoutForm: React.FC<CheckoutFormProps> = ({ onShippingPriceChange }) => {
-    const {  total } = productsSelector((state) => state.cart);
+const {  total } = productsSelector((state) => state.cart);
   const [order, setOrder] = useState<Order>({
       id:"",
       email: "",
@@ -33,6 +37,13 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onShippingPriceChange }) =>
       sameAddress: false,
       totalPrice:0
   });
+  const dispatch = useDispatch<AppDispatch>();
+
+  useEffect(()=>{
+
+    
+
+  },[total])
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
       const { name, value, type } = e.target;
@@ -68,13 +79,32 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onShippingPriceChange }) =>
         
        });
     console.log(order);
-      
-  }
-  // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   const price = parseFloat(event.target.value);
-  //   onShippingPriceChange(price);
-  // };
 
+    dispatch(removeAllProducts()); 
+    dispatch(submitOrder(order));
+    setOrder({
+    id:"",
+      email: "",
+      notifyMe: false,
+      country: "Egypt",
+      fName: "",
+      lName: "",
+      address: "",
+      apartment: "",
+      city: "",
+      governorate: "AST",
+      pCode: "",
+      phone: "",
+      nextTime: false,
+      shippingCity: "",
+      sameAddress: false,
+      totalPrice:0
+       });
+    alert("Your Order is completed successfully ");
+
+
+
+  }
   return (
     <div className="container">
             <form>
@@ -282,6 +312,8 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onShippingPriceChange }) =>
                 </div>
             </form>
 
+            
+ {/* thanks part */}
             <div className="modal fade" id="exampleModalCenter" tabIndex={-1} aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">

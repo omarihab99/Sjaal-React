@@ -114,6 +114,10 @@ const cartSlice = createSlice({
         state.products =  state.products.filter((p)=> p.id !== product.id);
         return state;
     },
+    removeAllProducts(state) {  // New action to remove all products from the cart
+      state.products = [];
+      cartSlice.caseReducers.calculateTotal(state);
+    },
     calculateTotal(state) {
       state.subtotal = state.products.reduce((total, product) => {
         const price = typeof product.price === 'number' ? product.price : 0;
@@ -199,5 +203,16 @@ const cartSlice = createSlice({
 });
 
 
-export const { calculateTotal, addProductToCart, buyProductNow, calculateCheckoutTotal, removeProduct, incrementQuantity, decrementQuantity, updateProductQuantity } = cartSlice.actions;
+export const {
+  calculateTotal,
+  addProductToCart,
+  buyProductNow,
+  calculateCheckoutTotal,
+  removeProduct,
+  removeAllProducts, // Export the new action
+  incrementQuantity,
+  decrementQuantity,
+  updateProductQuantity
+} = cartSlice.actions;
+
 export default cartSlice.reducer;

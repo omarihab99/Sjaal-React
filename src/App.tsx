@@ -6,11 +6,12 @@ import HomePage from './pages/HomePage';
 import NotFound from './pages/NotFound';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import Header from './components/Header';
 import CartPage from './pages/CartPage';
 import Checkout from './pages/CheckoutPage';
 import { store, persistor } from './redux/store';
 import ProductsPage from './pages/ProductsPage';
+import Layout from './pages/Layout' // Make sure to import the Layout component
+
 const CollectionsPage = lazy(() => import('./pages/CollectionsPage'));
 const ProductDetails = lazy(() => import("./pages/ProductDetailsPage"));
 
@@ -18,35 +19,36 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <HomePage />,
+      element: <Layout />, // Use Layout as the root element
       errorElement: <NotFound />,
-
-    },
-    {
-      path: "/collections",
-      element: <CollectionsPage />,
-    }, {
-      path: "/cart",
-      element: <CartPage />,
-
-
-    }, {
-      path: "/checkout",
-      element: <Checkout />,
-
-
-    },
-    {
-      path: 'products/:id',
-      element: <ProductDetails></ProductDetails>
-    },
-    {
-      path: 'collections/:CollectionId',
-      element: <ProductsPage></ProductsPage>
+      children: [
+        {
+          path: "/",
+          element: <HomePage />
+        },
+        {
+          path: "/collections",
+          element: <CollectionsPage />
+        },
+        {
+          path: "/cart",
+          element: <CartPage />
+        },
+        {
+          path: "/checkout",
+          element: <Checkout />
+        },
+        {
+          path: 'products/:id',
+          element: <ProductDetails />
+        },
+        {
+          path: 'collections/:CollectionId',
+          element: <ProductsPage />
+        }
+      ]
     }
   ]);
-
-
 
   return (
     <Provider store={store}>
