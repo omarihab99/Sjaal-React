@@ -28,11 +28,6 @@ const Filtration = ({ length, collId, filter, products }: { length: number; coll
             <div className="row" style={{width: "100%"}}>
                 <div className="d-flex col-3">
                     <p>Filter:</p> 
-                    <div className="dropdown margin-10">
-                        <button className="btn dropdown-toggle myDropDown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Price &nbsp;
-                        </button>
-                    </div>
                 </div>
 
                 <div className="col-5">
