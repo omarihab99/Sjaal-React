@@ -85,8 +85,11 @@ const Sidebar: React.FC<OffcanvasMenuProps> = ({ show, handleClose }) => {
     navigate("/collections");
     handleClose();
   };
-  const collectionClicked = (collectionId: string) =>
+  const collectionClicked = (collectionId: string) =>{
+    navigate(`/collections/${collectionId}`);
     localStorage.setItem("collectionId", collectionId);
+    handleClose();
+  }
   return (
     <>
 

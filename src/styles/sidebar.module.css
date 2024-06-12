@@ -11,7 +11,9 @@
   text-align: left;
   background: none;
 }
-
+.btnColor:focus {
+  background-color: transparent;
+}
 .tabsContainer button:hover,
 .homeHover:hover, .btnColor:hover {
   background-color: rgb(200, 193, 193);
