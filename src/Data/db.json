@@ -1099,5 +1099,43 @@
       "phone": "01125726669",
       "comment": "WOW!!"
     }
+  ],
+  "order": [
+    {
+      "id": "",
+      "email": "noura.ashraf812@gmail.com",
+      "notifyMe": false,
+      "country": "Egypt",
+      "fName": "Noura",
+      "lName": "Ashraf",
+      "address": "Giza",
+      "apartment": "",
+      "city": "Giza",
+      "governorate": "AST",
+      "pCode": "12942",
+      "phone": "01125726669",
+      "nextTime": false,
+      "shippingCity": true,
+      "sameAddress": false,
+      "totalPrice": 0
+    },
+    {
+      "id": "",
+      "email": "",
+      "notifyMe": false,
+      "country": "Egypt",
+      "fName": "",
+      "lName": "",
+      "address": "",
+      "apartment": "",
+      "city": "",
+      "governorate": "AST",
+      "pCode": "",
+      "phone": "",
+      "nextTime": false,
+      "shippingCity": "",
+      "sameAddress": false,
+      "totalPrice": 0
+    }
   ]
 }
