@@ -39,11 +39,11 @@ const {  total } = productsSelector((state) => state.cart);
   });
   const dispatch = useDispatch<AppDispatch>();
 
-//   useEffect(()=>{
+  useEffect(()=>{
 
-//     dispatch(calculateCheckoutTotal(order.totalPrice));
+    
 
-//   },[dispatch])
+  },[total])
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
       const { name, value, type } = e.target;
