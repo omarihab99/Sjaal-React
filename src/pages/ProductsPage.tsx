@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchProductsByCollectionId } from "../redux/slices/productSlice";
 import { IProduct } from "../models/IProduct";
-import { productsDispatch } from "../hooks/productsHook";
+import { productsDispatch, productsSelector } from "../hooks/productsHook";
 import { getCollectionById } from "../redux/slices/collectionSlice";
 import Description from "../components/ProductsPage/Description/description";
 import Filtration from "../components/ProductsPage/Filtration/filtration";
