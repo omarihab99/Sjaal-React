@@ -1,66 +1,82 @@
+
 import React, { ChangeEvent, useState } from 'react';
-import { governorateArr } from '../utils/governorateArr';
-import { shippingMethodArr } from '../utils/shippingMethodArr';
+import { governorateArr } from '../../utils/governorateArr';
+import { shippingMethodArr } from '../../utils/shippingMethodArr';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import classes from '../styles/CheckoutForm.module.css';
+import Order from '../../models/IOrder'
+import { productsSelector } from '../../hooks/productsHook';
+interface CheckoutFormProps {
+  onShippingPriceChange: (price: number) => void;
 
-interface Order {
-    email: string;
-    notifyMe: boolean;
-    country: string;
-    fName: string;
-    lName: string;
-    address: string;
-    apartment: string;
-    city: string;
-    governorate: string;
-    pCode: string;
-    phone: string;
-    nextTime: boolean;
-    shippingCity: string;
-    sameAddress: boolean;
+  style?: React.CSSProperties;
 }
 
-const CheckoutForm: React.FC = () => {
-    const [order, setOrder] = useState<Order>({
-        email: "",
-        notifyMe: false,
-        country: "Egypt",
-        fName: "",
-        lName: "",
-        address: "",
-        apartment: "",
-        city: "",
-        governorate: "AST",
-        pCode: "",
-        phone: "",
-        nextTime: false,
-        shippingCity: "",
-        sameAddress: false
-    });
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        const { name, value, type } = e.target;
-        if (type === 'checkbox') {
-            const { checked } = e.target as HTMLInputElement;
-            setOrder({
-                ...order,
-                [name]: checked
-            });
-        } else {
-            setOrder({
-                ...order,
-                [name]: value
-            });
-        }
-    };
-    const handelSubmit = ()=>{
-        console.log(order);
+const CheckoutForm: React.FC<CheckoutFormProps> = ({ onShippingPriceChange }) => {
+    const {  total } = productsSelector((state) => state.cart);
+  const [order, setOrder] = useState<Order>({
+      id:"",
+      email: "",
+      notifyMe: false,
+      country: "Egypt",
+      fName: "",
+      lName: "",
+      address: "",
+      apartment: "",
+      city: "",
+      governorate: "AST",
+      pCode: "",
+      phone: "",
+      nextTime: false,
+      shippingCity: "",
+      sameAddress: false,
+      totalPrice:0
+  });
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+      const { name, value, type } = e.target;
+      console.log(type)
+      console.log(value)
+      if (type === 'radio') {
+          const { checked } = e.target as HTMLInputElement;
+
+          setOrder({
+              ...order,
+              [name]: checked
+          });
+          const price = parseFloat(value);
+          onShippingPriceChange(price);
+          console.log(price)
+      } else {
+       
+          
+
+
+          setOrder({
+              ...order,
+              [name]: value
+              
+          });
+      }
+  };
+
+  const handelSubmit = ()=>{
+    setOrder({
+        ...order,
+       totalPrice:total
         
-    }
+       });
+    console.log(order);
+      
+  }
+  // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   const price = parseFloat(event.target.value);
+  //   onShippingPriceChange(price);
+  // };
 
-    return (
-        <div className="container">
+  return (
+    <div className="container">
             <form>
                 <div className=" mt-5">
                     <h5 className='text-start'>Contact</h5>
@@ -211,7 +227,7 @@ const CheckoutForm: React.FC = () => {
                                 type="radio"
                                 name="shippingCity"
                                 id={method.id}
-                                value={method.value}
+                                value={method.price}
                                 onChange={handleChange}
                             />
                             <label className="form-check-label" htmlFor={method.id}>
@@ -286,7 +302,7 @@ const CheckoutForm: React.FC = () => {
                 </div>
             </div>
         </div>
-    );
+  );
 };
 
 export default CheckoutForm;

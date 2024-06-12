@@ -1,0 +1,15 @@
+.youMayAlsoLike{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    height: 100%;
+    padding: 1rem;
+
+}
+@media (max-width: 700px) {
+    .youMayAlsoLike{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    
+}

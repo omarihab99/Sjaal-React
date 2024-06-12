@@ -14,4 +14,5 @@ export default interface Order {
     nextTime: boolean;
     shippingCity: string;
     sameAddress: boolean;
+    totalPrice:number;
 }

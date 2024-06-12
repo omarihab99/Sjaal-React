@@ -1,3 +1,4 @@
+import React, { useState, useRef } from "react";
 import { Button, Offcanvas } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +12,6 @@ import {
   faTiktok,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { useRef, useState } from "react";
 
 
 interface OffcanvasMenuProps {
@@ -267,4 +267,5 @@ const Sidebar: React.FC<OffcanvasMenuProps> = ({ show, handleClose }) => {
     </>
   );
 };
+
 export default Sidebar;
