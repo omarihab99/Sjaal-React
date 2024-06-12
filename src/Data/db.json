@@ -130,7 +130,7 @@
       "id": "1",
       "collectionId": "1",
       "name": "Black Linen Dress",
-      "price": 950,
+      "price": 850,
       "availableSizes": [
         "S/M",
         "L/XL"
@@ -147,6 +147,7 @@
       "rates": [
         1,
         2,
+        3,
         3,
         3
       ]
@@ -180,7 +181,7 @@
       "id": "3",
       "collectionId": "1",
       "name": "Olive Linen Dress",
-      "price": 970,
+      "price": 850,
       "availableSizes": [
         "S/M",
         "L/XL"
@@ -204,7 +205,7 @@
       "id": "4",
       "collectionId": "1",
       "name": "Cashmere Linen Dress",
-      "price": 650,
+      "price": 850,
       "availableSizes": [
         "S/M",
         "L/XL"
@@ -221,9 +222,7 @@
       "rates": [
         1,
         2,
-        3,
-        5,
-        5
+        3
       ]
     },
     {
@@ -1100,141 +1099,6 @@
       "email": "20190592@stud.fci-cu.edu.eg",
       "phone": "01125726669",
       "comment": "WOW!!"
-    },
-    {
-      "id": "",
-      "name": "omar",
-      "email": "omar.ihab.mohamed99@gmail.com",
-      "phone": "044444444",
-      "comment": "bad"
-    }
-  ],
-  "order": [
-    {
-      "id": "",
-      "email": "omar.ihab.mohamed99@gmail.com",
-      "notifyMe": false,
-      "country": "Egypt",
-      "fName": "oo",
-      "lName": "ooo",
-      "address": "oooo",
-      "apartment": "ooo",
-      "city": "oo",
-      "governorate": "AST",
-      "pCode": "11111",
-      "phone": "01091460364",
-      "nextTime": false,
-      "shippingCity": true,
-      "sameAddress": false,
-      "totalPrice": 0
-    },
-    {
-      "id": "",
-      "email": "",
-      "notifyMe": false,
-      "country": "Egypt",
-      "fName": "",
-      "lName": "",
-      "address": "",
-      "apartment": "",
-      "city": "",
-      "governorate": "AST",
-      "pCode": "",
-      "phone": "",
-      "nextTime": false,
-      "shippingCity": true,
-      "sameAddress": false,
-      "totalPrice": 0
-    },
-    {
-      "id": "",
-      "email": "",
-      "notifyMe": false,
-      "country": "Egypt",
-      "fName": "",
-      "lName": "",
-      "address": "",
-      "apartment": "",
-      "city": "",
-      "governorate": "AST",
-      "pCode": "",
-      "phone": "",
-      "nextTime": false,
-      "shippingCity": true,
-      "sameAddress": false,
-      "totalPrice": 0
-    },
-    {
-      "id": "",
-      "email": "",
-      "notifyMe": false,
-      "country": "Egypt",
-      "fName": "",
-      "lName": "",
-      "address": "",
-      "apartment": "",
-      "city": "",
-      "governorate": "AST",
-      "pCode": "",
-      "phone": "",
-      "nextTime": false,
-      "shippingCity": true,
-      "sameAddress": false,
-      "totalPrice": 0
-    },
-    {
-      "id": "",
-      "email": "",
-      "notifyMe": false,
-      "country": "Egypt",
-      "fName": "",
-      "lName": "",
-      "address": "",
-      "apartment": "",
-      "city": "",
-      "governorate": "AST",
-      "pCode": "",
-      "phone": "",
-      "nextTime": false,
-      "shippingCity": true,
-      "sameAddress": false,
-      "totalPrice": 935
-    },
-    {
-      "id": "",
-      "email": "omar.ihab.mohamed99@gmail.com",
-      "notifyMe": false,
-      "country": "Egypt",
-      "fName": "oo",
-      "lName": "ooo",
-      "address": "oooo",
-      "apartment": "ooo",
-      "city": "oo",
-      "governorate": "AST",
-      "pCode": "11111",
-      "phone": "01091460364",
-      "nextTime": false,
-      "shippingCity": true,
-      "sameAddress": false,
-      "totalPrice": 910
-    },
-    {
-      "id": "",
-      "email": "omar.ihab.mohamed99@gmail.com",
-      "notifyMe": false,
-      "country": "Egypt",
-      "fName": "oo",
-      "lName": "ooo",
-      "address": "oooo",
-      "apartment": "ooo",
-      "city": "oo",
-      "governorate": "AST",
-      "pCode": "11111",
-      "phone": "01091460364",
-      "nextTime": false,
-      "shippingCity": true,
-      "sameAddress": false,
-      "totalPrice": 1070
     }
   ]
 }
