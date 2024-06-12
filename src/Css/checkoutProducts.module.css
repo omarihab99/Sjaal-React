@@ -7,11 +7,14 @@
     font-weight: bold;
 }
 .favoritecounter {
+    /* position: absolute; */
+    /* right: 0; */
     margin-left: auto;
     padding: 10px;
     font-size: 12px;
     color: white;
-    background-color: rgb(0, 0, 0);
+    background-color: gray;
+    font-weight: bold;
     border-radius: 50%;
     text-align: center;
     width: 2px;

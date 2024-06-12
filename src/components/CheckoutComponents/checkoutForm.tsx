@@ -8,6 +8,7 @@ import { submitOrder } from '../../redux/slices/orderSlice';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../redux/store';
 import { calculateCheckoutTotal, removeAllProducts } from '../../redux/slices/CartSlice';
+import { useNavigate } from 'react-router-dom';
 
 interface CheckoutFormProps {
   onShippingPriceChange: (price: number) => void;
@@ -15,6 +16,7 @@ interface CheckoutFormProps {
 }
 
 const CheckoutForm: React.FC<CheckoutFormProps> = ({ onShippingPriceChange }) => {
+  const navigate = useNavigate();
   const { total } = productsSelector((state) => state.cart);
   const [order, setOrder] = useState<Order>({
     id: "",
@@ -85,6 +87,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onShippingPriceChange }) =>
     });
 
     alert("Your Order is completed successfully ");
+    navigate("/");
   };
 
   return (
@@ -284,7 +287,6 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onShippingPriceChange }) =>
             <button
               type="button"
               className="btn"
-              data-bs-dismiss="modal"
               style={{backgroundColor: "#1773b0", width: '100%', color: "white", fontWeight: 'bold'}}
               onClick={handelSubmit}
             >
@@ -295,25 +297,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onShippingPriceChange }) =>
       </form>
 
       {/* thanks part */}
-      <div className="modal fade" id="exampleModalCenter" tabIndex={-1} aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content">
-            <div className="modal-body text-center" style={{ color: 'green', fontWeight: 'bold' }}>
-              Your order has been completed successfully &#8730;
-            </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn"
-                data-bs-dismiss="modal"
-                style={{backgroundColor: "#1773b0", width: '100%', color: "white", fontWeight: 'bold'}}
-              >
-                OK
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };

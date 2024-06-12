@@ -12,7 +12,7 @@ const Checkout: React.FC = () => {
   };
 
   return (
-    <div className="d-flex checkout container">
+    <div className="d-flex checkout">
       <CheckoutForm  style={{ width: '100%' }} onShippingPriceChange={handleShippingPriceChange} />
       <CheckoutProducts shippingPrice={shippingPrice} />
     </div>

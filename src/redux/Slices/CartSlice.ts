@@ -89,7 +89,7 @@ const cartSlice = createSlice({
       if(productIndex !== -1){   
         state.products[productIndex].quantity += product.quantity;
         if(state.products[productIndex].quantity > 5){
-          alert("only 5 items of that product added")
+          
           state.products[productIndex].quantity = 5;
         }
       }
@@ -111,7 +111,7 @@ const cartSlice = createSlice({
     },
     removeProduct(state, action){
         const product = action.payload;
-        state.products =  state.products.filter((product)=> product !== product);
+        state.products =  state.products.filter((p)=> p.id !== product.id);
         return state;
     },
     removeAllProducts(state) {  // New action to remove all products from the cart
@@ -142,6 +142,10 @@ const cartSlice = createSlice({
         }
       }
       else{
+        if(product.quantity > 5){
+          alert("only 5 items of that product added")
+          product.quantity = 5;
+        }
         state.products.push(product);
       }
       cartSlice.caseReducers.calculateTotal(state);       

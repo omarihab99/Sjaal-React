@@ -130,7 +130,7 @@
       "id": "1",
       "collectionId": "1",
       "name": "Black Linen Dress",
-      "price": 850,
+      "price": 950,
       "availableSizes": [
         "S/M",
         "L/XL"
@@ -147,6 +147,7 @@
       "rates": [
         1,
         2,
+        3,
         3,
         3
       ]
